@@ -51,7 +51,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Hello_World] <a name="about-project"></a>
+# 📖 [portfolio_1] <a name="about-project"></a>
 
 **[Portfolio_1]** 
 This project showcases my skills in mobile design using Flexbox, Linters, and best practices in HTML and CSS. It demonstrates my ability to create responsive designs and follow best practices in version control, making it easy to understand and build upon.
