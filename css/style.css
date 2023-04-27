@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +13,13 @@ body {
   background-color: #e5e5e5;
 }
 
+header::before {
+  content: "";
+  display: block;
+  height: 20px;
+  background-color: #fff;
+}
+
 .my-nav {
   display: flex;
   background-color: #fff;
@@ -23,7 +31,7 @@ body {
 
 .my-nav h2 {
   color: #6070ff;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .menu-toggle {
@@ -41,7 +49,7 @@ body {
 }
 
 .container h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding-top: 25%;
   margin-left: 5%;
   margin-right: 5%;
@@ -50,14 +58,14 @@ body {
 }
 
 .container p {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding: 3% 5% 5% 5%;
   text-align: left;
   color: #344563;
 }
 
 .container h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #7f8cff;
   margin-left: 5%;
   font-size: 16px;
