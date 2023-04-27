@@ -51,10 +51,12 @@ header::before {
 .container h1 {
   font-family: 'Poppins', sans-serif;
   padding-top: 25%;
+  padding-right: 10%;
   margin-left: 5%;
   margin-right: 5%;
   font-size: 40px;
   color: #172b4d;
+  line-height: 52px;
 }
 
 .container p {
