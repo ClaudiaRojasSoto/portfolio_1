@@ -54,7 +54,7 @@ After you're finished please remove all the comments and instructions!
 # 📖 [Hello_World] <a name="about-project"></a>
 
 **[Portfolio_1]** 
-This project aims to help learn about branch creation, version control, and GitHub flow, while exercising skills with GitHub commands like pull requests, descriptive commits, and creating easy-to-understand README sections.
+This project showcases my skills in mobile design using Flexbox, Linters, and best practices in HTML and CSS. It demonstrates my ability to create responsive designs and follow best practices in version control, making it easy to understand and build upon.
 
 ## 🛠 Built With <a name="built-with"></a>
 
