@@ -32,7 +32,7 @@ body {
 }
 
 .container {
-  background-image: url(../img/header-shapes\mobile.png);
+  background-image: url(../img/header-shapes-mobile.png);
   border-bottom-left-radius: 15%;
   background-color: white;
   width: 100%;
