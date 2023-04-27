@@ -1,74 +1,73 @@
-
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    outline: 0;
-    box-sizing: border-box;
-    list-style: none;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
 body {
-    background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 .my-nav {
-    display: flex;
-    background-color: #fff;
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-  }
-  
-  .my-nav h2 {
-   color: #6070FF;
-   font-family: 'Poppins', sans-serif;
-  }
-  
-.menu-toggle {
-    color: #6070FF;
-    font-size: 25px;
+  display: flex;
+  background-color: #fff;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
 }
 
- .container {
-    background-image: url(../img/header-shapes\ mobile.png);
-    border-bottom-left-radius: 15%;
-    background-color: white;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.my-nav h2 {
+  color: #6070ff;
+  font-family: "Poppins", sans-serif;
+}
 
-  .container h1 {
-    font-family: 'Poppins', sans-serif;
-    padding-top: 25%;
-    margin-left: 5%;
-    margin-right: 5%;
-    font-size: 40px;
-    color: #172B4D;
-  }
+.menu-toggle {
+  color: #6070ff;
+  font-size: 25px;
+}
 
-  .container p {
-    font-family: 'Poppins', sans-serif;
-    padding: 3% 5% 5% 5%;
-    text-align: left;
-    color: #344563;
-  }
+.container {
+  background-image: url(../img/header-shapes\mobile.png);
+  border-bottom-left-radius: 15%;
+  background-color: white;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-  .container h3 {
-    font-family: 'Poppins', sans-serif;
-    color: #7F8CFF;
-    margin-left: 5%;
-    font-size: 16px;
-    font-weight: normal;
-  }
+.container h1 {
+  font-family: "Poppins", sans-serif;
+  padding-top: 25%;
+  margin-left: 5%;
+  margin-right: 5%;
+  font-size: 40px;
+  color: #172b4d;
+}
+
+.container p {
+  font-family: "Poppins", sans-serif;
+  padding: 3% 5% 5% 5%;
+  text-align: left;
+  color: #344563;
+}
+
+.container h3 {
+  font-family: "Poppins", sans-serif;
+  color: #7f8cff;
+  margin-left: 5%;
+  font-size: 16px;
+  font-weight: normal;
+}
 
 ul {
-    display:flex;
-    gap: 5%;
-    margin: 5%;
-    padding-bottom: 25%;
+  display: flex;
+  gap: 5%;
+  margin: 5%;
+  padding-bottom: 25%;
 }
