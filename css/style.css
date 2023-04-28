@@ -11,6 +11,8 @@
 
 body {
   background-color: #e5e5e5;
+  margin-bottom: 0;
+  gap: 0;
 }
 
 header::before {
@@ -79,4 +81,245 @@ ul {
   gap: 5%;
   margin: 5%;
   padding-bottom: 25%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 12px;
+  background-color: #FFFFFF;
+  border-radius: 16px;
+  border: 1px solid #DFE1E6;
+  overflow: hidden;
+  margin: 25% 5% 0 5%;
+}
+
+.principal-img {
+  width: 100%;
+}
+
+.card h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 44px;
+  color: #172B4D;
+  text-align: left;
+}
+
+.long-text {
+  padding-right: 10px;
+}
+
+.subtitle {
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  color: #344563;
+  line-height: 16px;
+}
+
+.grey {
+  color: #7A869A;
+}
+
+.grey img {
+  margin: 0 2% 0 2%;
+}
+
+.card p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  line-height: 24px;
+  color: #344563;
+}
+
+
+.card-buttons {
+  display: flex;
+  flex-direction: row;
+  margin-left: 0;
+  padding-bottom: 0;
+}
+
+.card-buttons li {
+  padding: 4px 12px;
+  background-color: #EBEBFF;
+  border-radius: 8px;
+}
+
+.card-buttons li button  {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: #6070FF;
+}
+
+.project-link {
+  width: 45%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color:#396DF2;
+  font-size: 17px;
+  padding: 16px 0 16px 0;
+  border: 1px solid #396DF2;
+  text-align: center;
+  border-radius: 16px;
+  margin-bottom: 5%;
+}
+
+.about-me {
+  border-top-right-radius: 15%;
+  background-color: white;
+  margin-top: 25%;
+  padding: 30% 5% 0 5%;
+}
+
+.title-about-me {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  color: #172B4D;
+}
+
+.text-about-me {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #344563;
+}
+
+.about-me h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #7f8cff;
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 12px;
+}
+
+.ul-about-me {
+  display: flex;
+  gap: 5%;
+  margin: 5%;
+  padding-bottom: 0;
+}
+
+.button-about-me {
+  width: 50%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color:#396DF2;
+  font-size: 17px;
+  padding: 13px 0 13px 0;
+  border: 1px solid #396DF2;
+  text-align: center;
+  border-radius: 16px;
+  margin-bottom: 5%;
+}
+
+.subtitle-about-me {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 500;
+  color: black;
+}
+
+.developer-languages{
+display: flex;
+flex-direction: column;
+margin: 0;
+padding-bottom: 10%;
+}
+
+.items-developer-languages {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: #253858;
+  background-color: #F7F7F9;
+  margin-bottom: 5%;
+  border-radius: 8px;
+  padding: 10px;
+  margin-left: 0;
+}
+
+.line {
+  border-top: 1px solid #DFE1E6;
+  width: 100%;
+  margin: 10% 0 10% 0;
+}
+
+.contact-me-bg {
+  background-color: #FFFFFF;
+}
+
+.contact-me {
+  border-top-left-radius: 15%;
+  background-image: url(../img/background-blue.svg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #6070FF;
+  padding: 40% 5% 0 5%;
+}
+
+.title-contact-me {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 40px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.text-contact-me {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+.form-contact-me {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10%;
+}
+
+.input-contact-me {
+  border: 1px solid #CFD8DC;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 400;
+  color: #172B4D;
+  padding: 4%;
+  margin-bottom: 5%;
+}
+
+#id-textarea {
+color: #B3BAC5;
+font-size: 15px;
+}
+
+.button-form {
+  width: 45%;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #6070FF;
+  padding: 8px;
+  margin-bottom: 10%;
 }
