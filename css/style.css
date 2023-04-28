@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -16,7 +15,7 @@ body {
 }
 
 header::before {
-  content: "";
+  content: '';
   display: block;
   height: 20px;
   background-color: #fff;
@@ -88,11 +87,12 @@ ul {
   flex-direction: column;
   padding: 16px;
   gap: 12px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 16px;
-  border: 1px solid #DFE1E6;
+  border: 1px solid #dfe1e6;
   overflow: hidden;
   margin: 25% 5% 0 5%;
+  height: 120%;
 }
 
 .principal-img {
@@ -105,7 +105,7 @@ ul {
   font-style: normal;
   font-weight: 700;
   line-height: 44px;
-  color: #172B4D;
+  color: #172b4d;
   text-align: left;
 }
 
@@ -122,21 +122,19 @@ ul {
 }
 
 .grey {
-  color: #7A869A;
+  color: #7a869a;
 }
 
 .grey img {
-  margin: 0 2% 0 2%;
+  margin: 0 3% 0 3%;
 }
 
 .card p {
   font-family: 'Poppins', sans-serif;
-  font-size: 16px;
   font-style: normal;
   line-height: 24px;
   color: #344563;
 }
-
 
 .card-buttons {
   display: flex;
@@ -147,27 +145,40 @@ ul {
 
 .card-buttons li {
   padding: 4px 12px;
-  background-color: #EBEBFF;
+  background-color: #ebebff;
   border-radius: 8px;
 }
 
-.card-buttons li button  {
+.card-buttons li button {
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
-  color: #6070FF;
+  color: #6070ff;
 }
 
 .project-link {
   width: 45%;
   font-family: 'Poppins', sans-serif;
   background-color: #fff;
-  color:#396DF2;
+  color: #396df2;
   font-size: 17px;
   padding: 16px 0 16px 0;
-  border: 1px solid #396DF2;
+  border: 1px solid #396df2;
   text-align: center;
   border-radius: 16px;
   margin-bottom: 5%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.project-link:hover {
+  background-color: #396df2;
+  color: #fff;
+  border-color: #fff;
+}
+
+.project-link:active {
+  background-color: #264a94;
+  border-color: #fff;
 }
 
 .about-me {
@@ -182,7 +193,7 @@ ul {
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
-  color: #172B4D;
+  color: #172b4d;
 }
 
 .text-about-me {
@@ -212,13 +223,26 @@ ul {
   width: 50%;
   font-family: 'Poppins', sans-serif;
   background-color: #fff;
-  color:#396DF2;
+  color: #396df2;
   font-size: 17px;
   padding: 13px 0 13px 0;
-  border: 1px solid #396DF2;
+  border: 1px solid #396df2;
   text-align: center;
   border-radius: 16px;
   margin-bottom: 5%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.button-about-me:hover {
+  background-color: #396df2;
+  color: #fff;
+  border-color: #fff;
+}
+
+.button-about-me:active {
+  background-color: #264a94;
+  border-color: #fff;
 }
 
 .subtitle-about-me {
@@ -229,11 +253,11 @@ ul {
   color: black;
 }
 
-.developer-languages{
-display: flex;
-flex-direction: column;
-margin: 0;
-padding-bottom: 10%;
+.developer-languages {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding-bottom: 10%;
 }
 
 .items-developer-languages {
@@ -244,7 +268,7 @@ padding-bottom: 10%;
   font-size: 15px;
   font-weight: 500;
   color: #253858;
-  background-color: #F7F7F9;
+  background-color: #f7f7f9;
   margin-bottom: 5%;
   border-radius: 8px;
   padding: 10px;
@@ -252,13 +276,13 @@ padding-bottom: 10%;
 }
 
 .line {
-  border-top: 1px solid #DFE1E6;
+  border-top: 1px solid #dfe1e6;
   width: 100%;
   margin: 10% 0 10% 0;
 }
 
 .contact-me-bg {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
 }
 
 .contact-me {
@@ -267,7 +291,7 @@ padding-bottom: 10%;
   width: 100%;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: #6070FF;
+  background-color: #6070ff;
   padding: 40% 5% 0 5%;
 }
 
@@ -276,7 +300,7 @@ padding-bottom: 10%;
   font-style: normal;
   font-size: 40px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -285,7 +309,7 @@ padding-bottom: 10%;
   font-style: normal;
   font-size: 20px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -296,30 +320,30 @@ padding-bottom: 10%;
 }
 
 .input-contact-me {
-  border: 1px solid #CFD8DC;
+  border: 1px solid #cfd8dc;
   border-radius: 8px;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
   font-size: 17px;
   font-weight: 400;
-  color: #172B4D;
+  color: #172b4d;
   padding: 4%;
   margin-bottom: 5%;
 }
 
 #id-textarea {
-color: #B3BAC5;
-font-size: 15px;
+  color: #b3bac5;
+  font-size: 15px;
 }
 
 .button-form {
   width: 45%;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 8px;
   font-family: 'Poppins', sans-serif;
   font-size: 17px;
   font-weight: 500;
-  color: #6070FF;
+  color: #6070ff;
   padding: 8px;
   margin-bottom: 10%;
 }
