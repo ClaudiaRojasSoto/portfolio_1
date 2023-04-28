@@ -18,12 +18,12 @@ header::before {
   content: '';
   display: block;
   height: 20px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .my-nav {
   display: flex;
-  background-color: #fff;
+  background-color: #ffffff;
   height: 50px;
   justify-content: space-between;
   align-items: center;
@@ -161,7 +161,7 @@ ul {
 .project-link {
   width: 45%;
   font-family: 'Poppins', sans-serif;
-  background-color: #fff;
+  background-color: #ffffff;
   color: #396df2;
   font-size: 17px;
   padding: 16px 0 16px 0;
@@ -170,19 +170,18 @@ ul {
   border-radius: 16px;
   margin-bottom: 5%;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .project-link:hover {
   background-color: #396df2;
-  color: #fff;
-  border-color: #fff;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 .project-link:active {
   background-color: #264a94;
-  border-color: #fff;
+  border-color: #ffffff;
 }
 
 .about-me {
@@ -226,7 +225,7 @@ ul {
 .button-about-me {
   width: 50%;
   font-family: 'Poppins', sans-serif;
-  background-color: #fff;
+  background-color: #ffffff;
   color: #396df2;
   font-size: 17px;
   padding: 13px 0 13px 0;
@@ -235,19 +234,18 @@ ul {
   border-radius: 16px;
   margin-bottom: 5%;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .button-about-me:hover {
   background-color: #396df2;
-  color: #fff;
-  border-color: #fff;
+  color: #ffffff;
+  border-color: #ffffff;
 }
 
 .button-about-me:active {
   background-color: #264a94;
-  border-color: #fff;
+  border-color: #ffffff;
 }
 
 .subtitle-about-me {
