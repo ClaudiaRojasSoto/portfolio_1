@@ -256,7 +256,7 @@ ul {
   color: black;
 }
 
-.languages-skill{
+.languages-skill {
   display: flex;
   flex-direction: column;
 }
