@@ -256,20 +256,25 @@ ul {
   color: black;
 }
 
+.languages-skill{
+  display: flex;
+  flex-direction: column;
+}
+
 .developer-languages-title {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 5%;
+  padding: 5% 0 5% 0;
   margin-right: 35px;
 }
 
 .developer-languages {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0 5% 0 5%;
+  margin: 5px 0 0 0 ;
+  padding-bottom: 0;
 }
 
 .items-developer-languages {
