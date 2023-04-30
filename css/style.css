@@ -330,9 +330,18 @@ ul {
 }
 
 .form-contact-me {
+  margin-top: 10%;
+}
+
+.form-list {
   display: flex;
   flex-direction: column;
-  margin-top: 10%;
+  list-style: none;
+  padding: 0;
+}
+
+.form-list li {
+  margin-bottom: 5%;
 }
 
 .input-contact-me {
@@ -344,7 +353,6 @@ ul {
   font-weight: 400;
   color: #172b4d;
   padding: 4%;
-  margin-bottom: 5%;
 }
 
 #id-textarea {
@@ -362,4 +370,17 @@ ul {
   color: #6070ff;
   padding: 8px;
   margin-bottom: 10%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.button-form:hover {
+  background-color: #6070ff;
+  color: #fff;
+  border-color: #fff;
+}
+
+.button-form:active {
+  background-color: #264a94;
+  border-color: #fff;
 }
