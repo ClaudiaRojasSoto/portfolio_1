@@ -302,7 +302,7 @@ ul {
 }
 
 .contact-me {
-  border-top-left-radius: 15%;
+  border-top-left-radius: 70px;
   background-image: url(../img/background-blue.svg);
   width: 100%;
   background-repeat: no-repeat;
@@ -338,6 +338,7 @@ ul {
   flex-direction: column;
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .form-list li {
@@ -352,12 +353,26 @@ ul {
   font-size: 17px;
   font-weight: 400;
   color: #172b4d;
-  padding: 4%;
+  padding: 4% 45% 4% 4%;
+  text-align: left;
 }
 
 #id-textarea {
   color: #b3bac5;
   font-size: 15px;
+  padding-right: 31%;
+}
+
+.input-contact-me:invalid {
+  border: 1px dashed red;
+}
+
+.input-contact-me:valid {
+  border: 1px solid #cfd8dc;
+}
+
+.input-contact-me:required:invalid {
+  background-image: linear-gradient(to bottom, #ffe6e6, #ffd9d9);
 }
 
 .button-form {
@@ -368,7 +383,7 @@ ul {
   font-size: 17px;
   font-weight: 500;
   color: #6070ff;
-  padding: 8px;
+  padding: 15px 8px 15px 8px;
   margin-bottom: 10%;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
