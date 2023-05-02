@@ -363,17 +363,7 @@ ul {
   padding-right: 31%;
 }
 
-.input-contact-me:invalid {
-  border: 1px dashed red;
-}
 
-.input-contact-me:valid {
-  border: 1px solid #cfd8dc;
-}
-
-.input-contact-me:required:invalid {
-  background-image: linear-gradient(to bottom, #ffe6e6, #ffd9d9);
-}
 
 .button-form {
   width: 45%;
