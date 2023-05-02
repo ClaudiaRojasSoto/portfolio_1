@@ -309,6 +309,7 @@ ul {
   background-size: cover;
   background-color: #6070ff;
   padding: 40% 5% 0 5%;
+  
 }
 
 .title-contact-me {
@@ -353,14 +354,15 @@ ul {
   font-size: 17px;
   font-weight: 400;
   color: #172b4d;
-  padding: 4% 45% 4% 4%;
   text-align: left;
+  width: 100%;
+  padding: 4%;
 }
 
 #id-textarea {
   color: #b3bac5;
   font-size: 15px;
-  padding-right: 31%;
+  padding-right: 30%;
 }
 
 
