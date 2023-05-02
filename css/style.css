@@ -296,3 +296,95 @@ ul {
   border-top: 1px solid #dfe1e6;
   width: 100%;
 }
+
+.contact-me-bg {
+  background-color: #fff;
+}
+
+.title-contact-me {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 40px;
+  font-weight: 700;
+  color: #fff;
+  text-align: center;
+}
+
+.text-contact-me {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  text-align: center;
+}
+
+.form-contact-me {
+  margin-top: 10%;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.form-list li {
+  margin-bottom: 5%;
+}
+
+.input-contact-me {
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 400;
+  color: #172b4d;
+  text-align: left;
+  width: 100%;
+  padding: 4%;
+}
+
+#id-textarea {
+  color: #b3bac5;
+  font-size: 15px;
+  padding-right: 30%;
+}
+
+.button-form {
+  width: 45%;
+  background-color: #fff;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+  color: #6070ff;
+  padding: 15px 8px 15px 8px;
+  margin-bottom: 10%;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.button-form:hover {
+  background-color: #6070ff;
+  color: #fff;
+  border-color: #fff;
+}
+
+.button-form:active {
+  background-color: #264a94;
+  border-color: #fff;
+}
+
+.contact-me {
+  padding: 103px 24px 45px;
+  border-top-left-radius: 80px;
+  background-color: #6070ff;
+  background-image: url(../img/contact-form-background-shapes.png);
+  background-repeat: no-repeat;
+  background-position: right 20px;
+  background-size: 60%;
+}
