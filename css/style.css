@@ -170,7 +170,8 @@ ul {
   border-radius: 16px;
   margin-bottom: 5%;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
 }
 
 .project-link:hover {
@@ -234,7 +235,8 @@ ul {
   border-radius: 16px;
   margin-bottom: 5%;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
 }
 
 .button-about-me:hover {
@@ -298,7 +300,7 @@ ul {
 }
 
 .contact-me-bg {
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 .title-contact-me {
@@ -306,7 +308,7 @@ ul {
   font-style: normal;
   font-size: 40px;
   font-weight: 700;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
 }
 
@@ -315,7 +317,7 @@ ul {
   font-style: normal;
   font-size: 20px;
   font-weight: 400;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
 }
 
@@ -354,11 +356,9 @@ ul {
   padding-right: 30%;
 }
 
-
-
 .button-form {
   width: 45%;
-  background-color: #ffffff;
+  background-color: #fff;
   border-radius: 8px;
   font-family: 'Poppins', sans-serif;
   font-size: 17px;
@@ -367,7 +367,8 @@ ul {
   padding: 15px 8px 15px 8px;
   margin-bottom: 10%;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
 }
 
 .button-form:hover {
