@@ -301,17 +301,6 @@ ul {
   background-color: #ffffff;
 }
 
-.contact-me {
-  border-top-left-radius: 70px;
-  background-image: url(../img/background-blue.svg);
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-color: #6070ff;
-  padding: 40% 5% 0 5%;
-  
-}
-
 .title-contact-me {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -390,4 +379,14 @@ ul {
 .button-form:active {
   background-color: #264a94;
   border-color: #fff;
+}
+
+.contact-me {
+  padding: 103px 24px 45px;
+  border-top-left-radius: 80px;
+  background-color: #6070ff;
+  background-image: url(../img/contact-form-background-shapes.png);
+  background-repeat: no-repeat;
+  background-position: right 20px;
+  background-size: 60%;
 }
