@@ -427,6 +427,7 @@ ul {
 }
 .nav-desktop {
   padding: 10% ;
+  display: none;
 }
 
 .nav-desktop ul {
@@ -472,6 +473,7 @@ ul {
 
   .content-card-desktop {
     padding-top: 7%;
+    margin-bottom: 15%;
   }
 
   .subtitle {
@@ -647,4 +649,23 @@ ul {
     margin: 2% 30% 0 30%;
   }
 
+  .form-contact-me {
+    margin-top: 2%;
+    width: 30%;
+  }
+  
+  .input-contact-me {
+    border-radius: 0;
+  }
+
+  .button-container-desktop {
+    text-align: center;
+  }
+  .about-me {
+    padding-bottom: 7%;
+  }
+
+  .nav-desktop {
+    display: block;
+  }
 }
