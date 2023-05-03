@@ -489,7 +489,7 @@ ul {
 
   .about-me {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 40% 60%;
     border-top-right-radius: 70px;
     background-color: white;
     margin: 15% 0 0 0;
