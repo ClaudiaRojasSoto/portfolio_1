@@ -420,6 +420,7 @@ ul {
   background-position: right 20px;
   background-size: 60%;
 }
+
 .nav-desktop {
   padding: 10%;
   display: none;
@@ -527,7 +528,6 @@ ul {
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: 100%;
   }
 
   .bg-img2 {
@@ -535,7 +535,6 @@ ul {
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: 100%;
   }
 
   .ruby-button {
@@ -568,16 +567,12 @@ ul {
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: 100%;
   }
 
   .subtitle-card3 {
     display: none;
   }
 
-  .subtitle-desktop-card3 {
-    display: block;
-  }
   #subtitle-card3 {
     display: none;
   }
@@ -604,11 +599,6 @@ ul {
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
-    background-size: 100%;
-  }
-
-  .subtitle-desktop-card4 {
-    display: block;
   }
 
   #subtitle-card4 {
@@ -655,6 +645,7 @@ ul {
   .button-container-desktop {
     text-align: center;
   }
+  
   .about-me {
     padding-bottom: 7%;
   }
