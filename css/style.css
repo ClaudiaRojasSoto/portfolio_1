@@ -493,7 +493,7 @@ ul {
     border-top-right-radius: 70px;
     background-color: white;
     margin: 15% 0 0 0;
-    padding: 10% 5% 30% 10%;
+    padding: 10% 5% 7% 10%;
   }
 
   .items-developer-languages {
@@ -644,10 +644,6 @@ ul {
 
   .button-container-desktop {
     text-align: center;
-  }
-  
-  .about-me {
-    padding-bottom: 7%;
   }
 
   .nav-desktop {
