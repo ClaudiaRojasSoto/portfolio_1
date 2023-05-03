@@ -159,7 +159,7 @@ ul {
   color: #6070ff;
 }
 
-.ruby-button{
+.ruby-button {
   display: none;
 }
 
@@ -171,7 +171,7 @@ ul {
   display: none;
 }
 
-.subtitle-desktop-card3{
+.subtitle-desktop-card3 {
   display: none;
 }
 
@@ -180,9 +180,8 @@ ul {
 }
 
 .subtitle-desktop-card4 {
- display: none;
+  display: none;
 }
-
 
 .subtitle-desktop-card4 {
   display: none;
@@ -203,10 +202,11 @@ ul {
   border-radius: 16px;
   margin-top: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
 }
 
-.project-link-container{
+.project-link-container {
   margin-top: 50px;
 }
 
@@ -271,7 +271,8 @@ ul {
   border-radius: 16px;
   margin-bottom: 5%;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
 }
 
 .button-about-me:hover {
@@ -402,7 +403,8 @@ ul {
   padding: 15px 8px 15px 8px;
   margin-bottom: 10%;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    border-color 0.3s ease-in-out;
 }
 
 .button-form:hover {
@@ -426,7 +428,7 @@ ul {
   background-size: 60%;
 }
 .nav-desktop {
-  padding: 10% ;
+  padding: 10%;
   display: none;
 }
 
@@ -445,7 +447,7 @@ ul {
   padding-bottom: 10%;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .menu-toggle {
     display: none;
   }
@@ -493,7 +495,7 @@ ul {
 
   .about-me {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     border-top-right-radius: 70px;
     background-color: white;
     margin: 15% 0 0 0;
@@ -524,19 +526,19 @@ ul {
   }
 
   .principal-img {
-  display: none;
+    display: none;
   }
 
   .bg-img1 {
-  background-image: url("../img/img1_desk.svg");
-  background-size: cover;
-  width: 100%;
-  background-repeat: no-repeat;
-  background-size: 100%;
+    background-image: url('../img/img1_desk.svg');
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
   }
 
   .bg-img2 {
-    background-image: url("../img/img2_desk.svg");
+    background-image: url('../img/img2_desk.svg');
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
@@ -556,7 +558,7 @@ ul {
     line-height: 16px;
   }
 
-  #subtitle-card2{
+  #subtitle-card2 {
     display: none;
   }
 
@@ -569,13 +571,13 @@ ul {
   }
 
   .bg-img3 {
-    background-image: url("../img/img3_desk.svg");
+    background-image: url('../img/img3_desk.svg');
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
     background-size: 100%;
   }
-  
+
   .subtitle-card3 {
     display: none;
   }
@@ -586,7 +588,6 @@ ul {
   #subtitle-card3 {
     display: none;
   }
-
 
   .subtitle-desktop-card3 {
     display: block;
@@ -606,7 +607,7 @@ ul {
   }
 
   .bg-img4 {
-    background-image: url("../img/img4_desk.svg");
+    background-image: url('../img/img4_desk.svg');
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
@@ -615,7 +616,7 @@ ul {
 
   .subtitle-desktop-card4 {
     display: block;
-    }
+  }
 
   #subtitle-card4 {
     display: none;
@@ -653,7 +654,7 @@ ul {
     margin-top: 2%;
     width: 30%;
   }
-  
+
   .input-contact-me {
     border-radius: 0;
   }
