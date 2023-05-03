@@ -198,8 +198,7 @@ ul {
   border-radius: 16px;
   margin-top: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .project-link-container {
@@ -267,8 +266,7 @@ ul {
   border-radius: 16px;
   margin-bottom: 5%;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .button-about-me:hover {
@@ -399,8 +397,7 @@ ul {
   padding: 15px 8px 15px 8px;
   margin-bottom: 10%;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .button-form:hover {
