@@ -163,7 +163,7 @@ ul {
   display: none;
 }
 
-.subtitle-dektop-card2 {
+.subtitle-desktop-card2 {
   display: none;
 }
 
@@ -180,11 +180,11 @@ ul {
 }
 
 .subtitle-desktop-card4 {
-display: none;
+ display: none;
 }
 
 
-.subtitle-dektop-card4 {
+.subtitle-desktop-card4 {
   display: none;
 }
 
@@ -615,9 +615,6 @@ display: none;
     display: block;
     }
 
-  .long-text {
-    display: none;
-  }
   #subtitle-card4 {
     display: none;
   }
@@ -638,4 +635,16 @@ display: none;
   .content-desktop-card4 {
     display: block;
   }
+
+  .contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-contact-me {
+    margin: 2% 30% 0 30%;
+  }
+
 }
