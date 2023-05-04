@@ -415,10 +415,10 @@ ul {
   padding: 103px 24px 45px;
   border-top-left-radius: 80px;
   background-color: #6070ff;
-  background-image: url(../img/contact-form-background-shapes.png);
+  background-image: url(../img/last.svg);
   background-repeat: no-repeat;
   background-position: right 20px;
-  background-size: 60%;
+  background-size: 100%;
 }
 
 .nav-desktop {
