@@ -424,6 +424,7 @@ ul {
 .nav-desktop {
   padding: 10%;
   display: none;
+  color: #344563;
 }
 
 .nav-desktop ul {
