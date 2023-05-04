@@ -534,11 +534,19 @@ ul {
     background-repeat: no-repeat;
   }
 
+  .bg-img1:hover {
+    transform: scale(1.1);
+  }
+
   .bg-img2 {
     background-image: url('../img/img2_desk.svg');
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
+  }
+
+  .bg-img2:hover {
+    transform: scale(1.1);
   }
 
   .ruby-button {
@@ -573,6 +581,10 @@ ul {
     background-repeat: no-repeat;
   }
 
+  .bg-img3:hover {
+    transform: scale(1.1);
+  }
+
   .subtitle-card3 {
     display: none;
   }
@@ -603,6 +615,10 @@ ul {
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
+  }
+
+  .bg-img4:hover {
+    transform: scale(1.1);
   }
 
   #subtitle-card4 {
