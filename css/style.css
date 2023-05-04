@@ -87,6 +87,7 @@ ul {
 }
 
 .card {
+  height: auto;
   display: flex;
   flex-direction: column;
   padding: 16px;
@@ -158,19 +159,50 @@ ul {
   color: #6070ff;
 }
 
+.ruby-button {
+  display: none;
+}
+
+.subtitle-desktop-card2 {
+  display: none;
+}
+
+.content-desktop-card2 {
+  display: none;
+}
+
+.subtitle-desktop-card3 {
+  display: none;
+}
+
+.content-desktop-card3 {
+  display: none;
+}
+
+.subtitle-desktop-card4 {
+  display: none;
+}
+
+.content-desktop-card4 {
+  display: none;
+}
+
 .project-link {
-  width: 45%;
   font-family: 'Poppins', sans-serif;
   background-color: #fff;
   color: #396df2;
   font-size: 17px;
-  padding: 16px 0 16px 0;
+  padding: 14px 16px 14px 16px;
   border: 1px solid #396df2;
   text-align: center;
   border-radius: 16px;
-  margin-bottom: 5%;
+  margin-top: 30px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.project-link-container {
+  margin-top: 50px;
 }
 
 .project-link:hover {
@@ -383,8 +415,249 @@ ul {
   padding: 103px 24px 45px;
   border-top-left-radius: 80px;
   background-color: #6070ff;
-  background-image: url(../img/contact-form-background-shapes.png);
+  background-image: url(../img/last.svg);
   background-repeat: no-repeat;
   background-position: right 20px;
-  background-size: 60%;
+  background-size: 100%;
+}
+
+.nav-desktop {
+  padding: 10%;
+  display: none;
+  color: #344563;
+}
+
+.nav-desktop ul {
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15%;
+  padding-top: 25%;
+}
+
+.content-card-desktop {
+  padding-bottom: 10%;
+}
+
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .my-nav {
+    padding-left: 10%;
+  }
+
+  .card {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 16px;
+    gap: 5%;
+    background-color: #fff;
+    border-radius: 16px;
+    border: 1px solid #dfe1e6;
+    overflow: hidden;
+    margin: 10% 10% 0 10%;
+  }
+
+  .content-card-desktop {
+    padding-top: 7%;
+    margin-bottom: 15%;
+  }
+
+  .subtitle {
+    padding: 2% 0 2% 0;
+  }
+
+  #img2 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+
+  #content2 {
+    grid-row: 1;
+    grid-column: 1;
+    margin-left: 3%;
+  }
+
+  .about-me {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    border-top-right-radius: 70px;
+    background-color: white;
+    margin: 15% 0 0 0;
+    padding: 10% 5% 7% 10%;
+  }
+
+  .items-developer-languages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #253858;
+    background-color: #f7f7f9;
+    margin-bottom: 5%;
+    border-radius: 8px;
+    width: 122px;
+    height: 120px;
+    margin-left: 0;
+  }
+
+  .developer-languages {
+    display: flex;
+    flex-direction: row;
+    margin: 5px 0 0 0;
+    text-align: left;
+  }
+
+  .principal-img {
+    display: none;
+  }
+
+  .bg-img1 {
+    background-image: url('../img/img1_desk.svg');
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .bg-img2 {
+    background-image: url('../img/img2_desk.svg');
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .ruby-button {
+    display: block;
+  }
+
+  .subtitle-desktop-card2 {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    color: #344563;
+    line-height: 16px;
+  }
+
+  #subtitle-card2 {
+    display: none;
+  }
+
+  .content-desktop-card2 {
+    display: block;
+  }
+
+  .content-card2 {
+    display: none;
+  }
+
+  .bg-img3 {
+    background-image: url('../img/img3_desk.svg');
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  .subtitle-card3 {
+    display: none;
+  }
+
+  #subtitle-card3 {
+    display: none;
+  }
+
+  .subtitle-desktop-card3 {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    color: #344563;
+    line-height: 16px;
+  }
+
+  .content-card3 {
+    display: none;
+  }
+
+  .content-desktop-card3 {
+    display: block;
+  }
+
+  .bg-img4 {
+    background-image: url('../img/img4_desk.svg');
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+  }
+
+  #subtitle-card4 {
+    display: none;
+  }
+
+  .subtitle-desktop-card4 {
+    display: block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    color: #344563;
+    line-height: 16px;
+  }
+
+  .content-card4 {
+    display: none;
+  }
+
+  .content-desktop-card4 {
+    display: block;
+  }
+
+  .contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .text-contact-me {
+    margin: 2% 30% 0 30%;
+  }
+
+  .form-contact-me {
+    margin-top: 2%;
+    width: 30%;
+  }
+
+  .input-contact-me {
+    border-radius: 0;
+  }
+
+  .button-container-desktop {
+    text-align: center;
+  }
+
+  .nav-desktop {
+    display: block;
+  }
+
+  .card:hover {
+    border: 2px solid #a7aeff;
+    box-shadow: 2px 40px 10px rgba(0, 0, 0, 0.03);
+  }
+
+  .container {
+    background-image: url(../img/first.svg);
+    border-bottom-left-radius: 15%;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 0 10% 0 10%;
+  }
 }

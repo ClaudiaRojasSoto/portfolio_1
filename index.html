@@ -27,6 +27,13 @@
             <div>
                 <div class="menu-toggle">&#9776;</div>
             </div>
+            <div class="nav-desktop">
+              <ul>
+                    <li>Portfolio</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
         </nav>
     </header>
     <section>
@@ -72,7 +79,10 @@
     </section>
     <section class="card-list">
         <div class="card">
-            <img class="principal-img" src="./img/card1.svg" alt="Project image">
+            <div class="bg-img1">
+                <img class="principal-img" src="./img/card1.svg" alt="Project image">
+            </div>
+        <div class="content-card-desktop">
             <h2>Tonic</h2>
             <p class="subtitle">
                 CANOPY
@@ -98,14 +108,18 @@
                     <button>JavaScript</button>
                 </li>
             </ul>
+            <div class="project-link-container">
             <a href="#" class="project-link">See project</a>
         </div>
+        </div>
+        </div>
         <div class="card">
-            <a href="#">
+            <div class="bg-img2" id="img2">
                 <img class="principal-img" src="./img/card2.svg" alt="Project image">
-            </a>
+            </div>
+            <div class="content-card-desktop" id="content2">
             <h2 class="long-text">Multi-Post Stories</h2>
-            <p class="subtitle">
+            <p class="subtitle" id="subtitle-card2">
                 CANOPY
                 <span class="grey">
                     <img src="./img/period.svg" alt="Grey period in text">
@@ -114,13 +128,28 @@
                     2015
                 </span>
             </p>
-            <p>
+            <p class="subtitle-desktop-card2">
+                FACEBOOK
+                <span class="grey">
+                    <img src="./img/period.svg" alt="Grey period in text">
+                    Full Stack Dev
+                    <img src="./img/period.svg" alt="Grey period in text">
+                    2015
+                </span>
+            </p>
+            <p class="content-card2">
                 A daily selection of privately personalized reads; no accounts or
                 sign-ups required.
+            </p>
+            <p class="content-desktop-card2">
+                Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.
             </p>
             <ul class="card-buttons">
                 <li>
                     <button>Html</button>
+                </li>
+                <li class="ruby-button">
+                    <button>Ruby on rails</button>
                 </li>
                 <li>
                     <button>css</button>
@@ -129,12 +158,19 @@
                     <button>JavaScript</button>
                 </li>
             </ul>
+            <div class="project-link-container">
             <a href="#" class="project-link">See project</a>
         </div>
+        </div>
+        </div>
         <div class="card">
+            <div class="bg-img3">
             <img class="principal-img" src="./img/card3.svg" alt="Project image">
-            <h2>Tonic</h2>
-            <p class="subtitle">
+        </div>
+        <div class="content-card-desktop">
+            <h2 class="subtitle-card3">Tonic</h2>
+            <h2 class="subtitle-desktop-card3">Facebook 360</h2>
+            <p class="subtitle" id="subtitle-card3">
                 CANOPY
                 <span class="grey">
                     <img src="./img/period.svg" alt="Grey period in text">
@@ -143,13 +179,28 @@
                     2015
                 </span>
             </p>
-            <p>
+            <p class="subtitle-desktop-card3">
+                FACEBOOK
+                <span class="grey">
+                    <img src="./img/period.svg" alt="Grey period in text">
+                    Full Stack Dev
+                    <img src="./img/period.svg" alt="Grey period in text">
+                    2015
+                </span>
+            </p>
+            <p class="content-card3">
                 A daily selection of privately personalized reads; no accounts or
                 sign-ups required.
+            </p>
+            <p class="content-desktop-card3">
+                Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.
             </p>
             <ul class="card-buttons">
                 <li>
                     <button>HTML</button>
+                </li>
+                <li class="ruby-button">
+                    <button>Ruby on rails</button>
                 </li>
                 <li>
                     <button>CSS</button>
@@ -158,14 +209,19 @@
                     <button>JavaScript</button>
                 </li>
             </ul>
+            <div class="project-link-container">
             <a href="#" class="project-link">See project</a>
+            </div>
+        </div>
         </div>
         <div class="card">
-            <a href="#">
+            <div class="bg-img4" id="img2">
                 <img class="principal-img" src="./img/card4.svg" alt="Project image">
-            </a>
+            </div>
+                <div class="content-card-desktop" id="content2">
             <h2 class="long-text">Multi-Post Stories</h2>
-            <p class="subtitle">
+            <h2 class="subtitle-desktop-card4">Uber Navigation</h2>
+            <p class="subtitle" id="subtitle-card4">
                 CANOPY
                 <span class="grey">
                     <img src="./img/period.svg" alt="Grey period in text">
@@ -174,13 +230,28 @@
                     2015
                 </span>
             </p>
-            <p>
+            <p class="subtitle-desktop-card4">
+                UBER
+                <span class="grey">
+                    <img src="./img/period.svg" alt="Grey period in text">
+                    Lead Developer
+                    <img src="./img/period.svg" alt="Grey period in text">
+                    2018
+                </span>
+            </p>
+            <p class="content-card4">
                 A daily selection of privately personalized reads; no accounts or
                 sign-ups required.
+            </p>
+            <p class="content-desktop-card4">
+                A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.
             </p>
             <ul class="card-buttons">
                 <li>
                     <button>Html</button>
+                </li>
+                <li class="ruby-button">
+                    <button>Ruby on rails</button>
                 </li>
                 <li>
                     <button>css</button>
@@ -189,10 +260,14 @@
                     <button>JavaScript</button>
                 </li>
             </ul>
+            <div class="project-link-container">
             <a href="#" class="project-link">See project</a>
+        </div>
+            </div>
         </div>
     </section>
     <section class="about-me">
+        <div class="aboutme-desktop">
         <p class="title-about-me">
             About Myself
         </p>
@@ -231,6 +306,7 @@
             </li>
         </ul>
         <button class="button-about-me">Get my resume</button>
+        </div>
         <ul class="languages-skill">
             <li class="developer-languages-title">
                 <p class="subtitle-about-me">Languages</p>
@@ -268,6 +344,7 @@
             </li>
         </ul>
     </section>
+
     <section class="contact-me-bg">
         <div class="contact-me">
             <p class="title-contact-me">Contact me</p>
@@ -287,7 +364,7 @@
                   <li>
                     <textarea class="input-contact-me" name="message" id="id-textarea" cols="30" rows="7" placeholder="Write your message here..." maxlength="500" required></textarea>
                   </li>
-                  <li>
+                  <li class="button-container-desktop">
                     <button class="button-form" type="submit">
                       Get in touch
                     </button>
@@ -297,5 +374,4 @@
         </div>
     </section>
 </body>
-
 </html>
