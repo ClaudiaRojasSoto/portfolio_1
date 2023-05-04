@@ -654,4 +654,12 @@ ul {
     border: 2px solid #a7aeff;
     box-shadow: 2px 40px 10px rgba(0, 0, 0, 0.03);
   }
+
+  .container {
+    background-image: url(../img/first.svg);
+    border-bottom-left-radius: 15%;
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: 100%;
+  }
 }
