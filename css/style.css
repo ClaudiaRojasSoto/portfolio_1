@@ -652,6 +652,6 @@ ul {
 
   .card:hover {
     border: 2px solid #A7AEFF;
-    box-shadow: 2px 40px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 2px 40px 10px rgba(0, 0, 0, 0.03);
   }
 }
