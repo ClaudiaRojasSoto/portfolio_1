@@ -33,7 +33,14 @@ header::before {
 .my-nav h2 {
   color: #6070ff;
   font-family: 'Poppins', sans-serif;
+  animation: spin 4s;
 }
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 .menu-toggle {
   color: #6070ff;
