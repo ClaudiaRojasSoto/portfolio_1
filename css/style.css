@@ -651,7 +651,7 @@ ul {
   }
 
   .card:hover {
-    border: 2px solid #A7AEFF;
+    border: 2px solid #a7aeff;
     box-shadow: 2px 40px 10px rgba(0, 0, 0, 0.03);
   }
 }
