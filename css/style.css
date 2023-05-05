@@ -465,9 +465,9 @@ ul {
   .nav-desktop ul li {
     position: relative;
     display: inline-block;
-}
+  }
 
-.nav-desktop ul li:hover::after {
+  .nav-desktop ul li:hover::after {
     content: "";
     position: absolute;
     left: 0;
@@ -476,11 +476,11 @@ ul {
     height: 3px;
     background-color: #396df2;
     transition: width 0.5s ease;
-}
+  }
 
-.nav-desktop ul li:hover::after {
+  .nav-desktop ul li:hover::after {
     width: 100%;
-}
+  }
 
   .card {
     height: auto;
