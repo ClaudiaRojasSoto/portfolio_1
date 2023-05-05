@@ -472,15 +472,12 @@ ul {
     position: absolute;
     left: 0;
     bottom: -2px;
-    width: 0;
+    width: 100%;
     height: 3px;
     background-color: #396df2;
     transition: width 0.5s ease;
   }
-
-  .nav-desktop ul li:hover::after {
-    width: 100%;
-  }
+  
 
   .card {
     height: auto;
