@@ -33,6 +33,17 @@ header::before {
 .my-nav h2 {
   color: #6070ff;
   font-family: 'Poppins', sans-serif;
+  animation: spin 4s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .menu-toggle {
@@ -451,6 +462,22 @@ ul {
     padding-left: 10%;
   }
 
+  .nav-desktop ul li {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-desktop ul li:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 3px;
+    background-color: #396df2;
+    transition: width 0.5s ease;
+  }
+
   .card {
     height: auto;
     display: grid;
@@ -527,11 +554,19 @@ ul {
     background-repeat: no-repeat;
   }
 
+  .bg-img1:hover {
+    transform: scale(1.1);
+  }
+
   .bg-img2 {
     background-image: url('../img/img2_desk.svg');
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
+  }
+
+  .bg-img2:hover {
+    transform: scale(1.1);
   }
 
   .ruby-button {
@@ -566,6 +601,10 @@ ul {
     background-repeat: no-repeat;
   }
 
+  .bg-img3:hover {
+    transform: scale(1.1);
+  }
+
   .subtitle-card3 {
     display: none;
   }
@@ -596,6 +635,10 @@ ul {
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
+  }
+
+  .bg-img4:hover {
+    transform: scale(1.1);
   }
 
   #subtitle-card4 {
@@ -659,5 +702,9 @@ ul {
     background-repeat: no-repeat;
     background-size: 100%;
     padding: 0 10% 0 10%;
+  }
+
+  .input-contact-me:hover {
+    transform: translateX(10px);
   }
 }
