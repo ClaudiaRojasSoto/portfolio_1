@@ -46,7 +46,6 @@ header::before {
   }
 }
 
-
 .menu-toggle {
   color: #6070ff;
   font-size: 25px;
@@ -462,6 +461,26 @@ ul {
   .my-nav {
     padding-left: 10%;
   }
+
+  .nav-desktop ul li {
+    position: relative;
+    display: inline-block;
+}
+
+.nav-desktop ul li:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 3px;
+    background-color: #396df2;
+    transition: width 0.5s ease;
+}
+
+.nav-desktop ul li:hover::after {
+    width: 100%;
+}
 
   .card {
     height: auto;
