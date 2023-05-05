@@ -37,8 +37,13 @@ header::before {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 
@@ -682,5 +687,9 @@ ul {
     background-repeat: no-repeat;
     background-size: 100%;
     padding: 0 10% 0 10%;
+  }
+
+  .input-contact-me:hover {
+    transform: translateX(10px);
   }
 }
