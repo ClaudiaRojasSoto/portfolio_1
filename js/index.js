@@ -1,6 +1,6 @@
-/* eslint-disable no-unused-vars */
+
 const mobileMenuModulesCreator = (() => {
-  // eslint-disable-next-line quotes
+  
   const nav = document.querySelector('.my-nav');
 
   let closeIcon;
