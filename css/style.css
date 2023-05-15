@@ -28,6 +28,7 @@ header::before {
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  position: relative;
 }
 
 .my-nav h2 {
