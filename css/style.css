@@ -50,6 +50,7 @@ header::before {
 .menu-toggle {
   color: #6070ff;
   font-size: 25px;
+  cursor: pointer;
 }
 
 .container {
