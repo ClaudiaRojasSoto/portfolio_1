@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 const mobileMenuModulesCreator = (() => {
-  const nav = document.querySelector(".my-nav");
+  // eslint-disable-next-line quotes
+  const nav = document.querySelector('.my-nav');
 
   let closeIcon;
   let menuMobile;
@@ -12,22 +14,22 @@ const mobileMenuModulesCreator = (() => {
   `;
 
   function removeNavMobile() {
-    const navMobile = document.querySelector(".nav-mobile");
+    const navMobile = document.querySelector('.nav-mobile');
     if (nav.contains(navMobile)) {
       nav.removeChild(navMobile);
     }
   }
 
   function createMenuItems() {
-    menuItems = document.createElement("ul");
-    menuItems.classList.add("menu-list");
+    menuItems = document.createElement('ul');
+    menuItems.classList.add('menu-list');
     menuItems.innerHTML = menuItemsHTML;
-    menuItems.querySelectorAll("a").forEach((item) => {
-      item.addEventListener("click", function (event) {
+    menuItems.querySelectorAll('a').forEach((item) => {
+      item.addEventListener('click', (event) => {
         event.preventDefault();
-        const targetSection = document.querySelector(item.getAttribute("href"));
+        const targetSection = document.querySelector(item.getAttribute('href'));
         targetSection.scrollIntoView({
-          behavior: "smooth",
+          behavior: 'smooth',
         });
         mobileMenuModulesCreator.closeMenu();
       });
@@ -35,21 +37,21 @@ const mobileMenuModulesCreator = (() => {
   }
 
   function createCloseIcon() {
-    closeIcon = document.createElement("div");
-    closeIcon.classList.add("close-icon");
-    closeIcon.textContent = "x";
-    closeIcon.addEventListener("click", mobileMenuModulesCreator.closeMenu);
+    closeIcon = document.createElement('div');
+    closeIcon.classList.add('close-icon');
+    closeIcon.textContent = 'x';
+    closeIcon.addEventListener('click', mobileMenuModulesCreator.closeMenu);
   }
 
   function createMenuMobile() {
-    menuMobile = document.createElement("div");
-    menuMobile.classList.add("nav-mobile");
+    menuMobile = document.createElement('div');
+    menuMobile.classList.add('nav-mobile');
     menuMobile.appendChild(closeIcon);
     menuMobile.appendChild(menuItems);
   }
 
   function openMenu() {
-    nav.classList.add("menu-open");
+    nav.classList.add('menu-open');
     createCloseIcon();
     createMenuItems();
     createMenuMobile();
@@ -57,7 +59,7 @@ const mobileMenuModulesCreator = (() => {
   }
 
   function closeMenu() {
-    nav.classList.remove("menu-open");
+    nav.classList.remove('menu-open');
     removeNavMobile();
   }
   return {
@@ -65,7 +67,8 @@ const mobileMenuModulesCreator = (() => {
     closeMenu,
   };
 })();
+
 const menuToggleModule = (() => {
-  const menuToggle = document.querySelector(".menu-toggle");
-  menuToggle.addEventListener("click", mobileMenuModulesCreator.openMenu);
+  const menuToggle = document.querySelector('.menu-toggle');
+  menuToggle.addEventListener('click', mobileMenuModulesCreator.openMenu);
 })();
