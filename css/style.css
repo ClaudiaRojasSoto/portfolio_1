@@ -74,11 +74,18 @@ header::before {
   display: flex;
 }
 
+ul {
+  display: flex;
+  gap: 5%;
+  margin: 5%;
+  padding-bottom: 25%;
+}
+
 .nav-mobile ul,
 .nav-mobile li,
 .nav-mobile a,
 .nav-mobile .close-icon {
-  color: #ffffff;
+  color: #fff;
   font-family: "Poppins", sans-serif;
 }
 
@@ -147,13 +154,6 @@ header::before {
   margin-left: 5%;
   font-size: 16px;
   font-weight: normal;
-}
-
-ul {
-  display: flex;
-  gap: 5%;
-  margin: 5%;
-  padding-bottom: 25%;
 }
 
 .card-list {
@@ -272,8 +272,7 @@ ul {
   border-radius: 16px;
   margin-top: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .project-link-container {
@@ -341,8 +340,7 @@ ul {
   border-radius: 16px;
   margin-bottom: 5%;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .button-about-me:hover {
@@ -473,8 +471,7 @@ ul {
   padding: 15px 8px 15px 8px;
   margin-bottom: 10%;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .button-form:hover {
@@ -507,7 +504,7 @@ ul {
 .nav-desktop ul {
   font-family: "Poppins", sans-serif;
   font-style: normal;
-  font-weight: 500px;
+  font-weight: 500;
   font-size: 15px;
   display: flex;
   align-items: center;
