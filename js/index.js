@@ -1,8 +1,5 @@
-
 const mobileMenuModulesCreator = (() => {
-  
   const nav = document.querySelector('.my-nav');
-
   let closeIcon;
   let menuMobile;
   let menuItems;
@@ -39,10 +36,8 @@ const mobileMenuModulesCreator = (() => {
   function createCloseIcon() {
     closeIcon = document.createElement('div');
     closeIcon.classList.add('close-icon');
-    
     const closeIconImage = document.createElement('img');
-    closeIconImage.src = 'img/Iconx.png'; 
-    
+    closeIconImage.src = 'img/Iconx.png';
     closeIcon.appendChild(closeIconImage);
     closeIcon.addEventListener('click', mobileMenuModulesCreator.closeMenu);
   }
@@ -72,7 +67,9 @@ const mobileMenuModulesCreator = (() => {
   };
 })();
 
-const menuToggleModule = (() => {
+(() => {
   const menuToggle = document.querySelector('.menu-toggle');
-  menuToggle.addEventListener('click', mobileMenuModulesCreator.openMenu);
+  menuToggle.addEventListener('click', () => {
+    mobileMenuModulesCreator.openMenu();
+  });
 })();
