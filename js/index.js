@@ -76,87 +76,23 @@ const mobileMenuModulesCreator = (() => {
   });
 })();
 
-// details-popup-window
 
-let projectLinkContainer = document.querySelector('.project-link-container');
 
-// console.log(projectLinkContainer);
-
-/*const seeProjectsButton = document.querySelectorAll(
+//Popup
+const seeProjectsButton = document.querySelectorAll(
   '[data-see-project-button]'
 );
 
 seeProjectsButton.forEach((button) => {
-  button.addEventListener('click', () => {
+  button.addEventListener("click", () => {
     const projectId = button.id;
     const projectData = getData(projectId);
-    if (window.innerWidth <= 768) {
-      openPopUp(projectData);
-      openPopUpDesktop(projectData);
-    }
+    const project = (window.innerWidth <= 768) ? projectData : projectData.desktopData;
+    openPopUp(project);
   });
-});*/
+});
 
-projectButton1.addEventListener('click', () => {
-   openPopUp(projectButton1.id);
- });
-
- projectButton2.addEventListener('click', () => {
-   openPopUp(projectButton2.id);
- });
-
- projectButton3.addEventListener('click', () => {
-   openPopUp(projectButton3.id);
- });
-
- projectButton4.addEventListener('click', () => {
-   openPopUp(projectButton4.id);
- });
-
- projectButton1.addEventListener('click', () => {
-   if (window.innerWidth <= 768) {
-     openPopUp(projectButton1.id);
-     const projectData = getDataDesktop(projectButton1.id);
-     openPopUpDesktop(projectData);
-   }
- });
-
- projectButton2.addEventListener('click', () => {
-   if (window.innerWidth <= 768) {
-     openPopUp(projectButton2.id);
-   } else {
-     const projectData = getDataDesktop(projectButton2.id);
-     openPopUpDesktop(projectData);
-   }
- });
-
- projectButton3.addEventListener('click', () => {
-   if (window.innerWidth <= 768) {
-     openPopUp(projectButton3.id);
-   } else {
-     const projectData = getDataDesktop(projectButton3.id);
-     openPopUpDesktop(projectData);
-   }
- });
-
- projectButton4.addEventListener('click', () => {
-   if (window.innerWidth <= 768) {
-     openPopUp(projectButton4.id);
-   } else {
-     const projectData = getDataDesktop(projectButton4.id);
-     openPopUpDesktop(projectData);
-   }
- });
-
-function openPopUp(projectData) {
-  const getId = getData(projectData);
-  let project;
-  if (window.innerWidth <= 768) {
-    project = getId;
-  } else {
-    project = getId.desktopData;
-    console.log('validando nombre', project.name);
-  }
+function openPopUp(project) {
   const modal = document.createElement('div');
   modal.classList.add('modal');
   modal.id = 'projectDetailsModal';
