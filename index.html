@@ -9,10 +9,6 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 
@@ -28,14 +24,15 @@
                 <div class="menu-toggle">&#9776;</div>
             </div>
             <div class="nav-desktop">
-              <ul>
-                    <li>Portfolio</li>
-                    <li>About</li>
-                    <li>Contact</li>
+                <ul>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+
     <section>
         <main class="container">
             <h1 class="title">
@@ -77,7 +74,8 @@
             </ul>
         </main>
     </section>
-    <section class="card-list">
+
+    <section id="portfolio"  class="card-list">
         <div class="card">
             <div class="bg-img1">
                 <img class="principal-img" src="./img/card1.svg" alt="Project image">
@@ -266,7 +264,8 @@
             </div>
         </div>
     </section>
-    <section class="about-me">
+
+    <section id="about"  class="about-me">
         <div class="aboutme-desktop">
         <p class="title-about-me">
             About Myself
@@ -345,7 +344,7 @@
         </ul>
     </section>
 
-    <section class="contact-me-bg">
+    <section id="contact" class="contact-me-bg">
         <div class="contact-me">
             <p class="title-contact-me">Contact me</p>
             <p class="text-contact-me">
@@ -373,5 +372,6 @@
               </form>
         </div>
     </section>
+    <script src="js/index.js" type="application/javascript"></script>
 </body>
 </html>
