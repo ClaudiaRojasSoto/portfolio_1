@@ -88,10 +88,10 @@ const seeProjectsButton = document.querySelectorAll(
 
 seeProjectsButton.forEach((button) => {
   button.addEventListener('click', () => {
-    // console.log(button.id);
+    const projectId = button.id;
+    const projectData = getData(projectId);
     if (window.innerWidth <= 768) {
-      openPopUp(button.id);
-      const projectData = getDataDesktop(button.id);
+      openPopUp(projectData);
       openPopUpDesktop(projectData);
     }
   });
