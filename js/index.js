@@ -39,7 +39,11 @@ const mobileMenuModulesCreator = (() => {
   function createCloseIcon() {
     closeIcon = document.createElement('div');
     closeIcon.classList.add('close-icon');
-    closeIcon.textContent = 'x';
+    
+    const closeIconImage = document.createElement('img');
+    closeIconImage.src = 'img/Iconx.png'; 
+    
+    closeIcon.appendChild(closeIconImage);
     closeIcon.addEventListener('click', mobileMenuModulesCreator.closeMenu);
   }
 
