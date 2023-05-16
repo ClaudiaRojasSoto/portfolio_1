@@ -108,7 +108,7 @@ function createElement(tag, attributes = {}, children = []) {
 function openPopUp(project) {
   const modal = createElement('div', { classList: ['modal'], id: 'projectDetailsModal' }, [
     createElement('div', { classList: ['modal-content'] }, [
-      createElement('span', { classList: ['close-btn'], id: 'close-btn-modal', innerHTML: '<img src="img/Iconx.png">' }),
+      createElement('span', { classList: ['close-btn'], id: 'close-btn-modal', innerHTML: '<img src="img/IconXpop.svg">' }),
       createElement('div', { classList: ['project-details'] }, [
         createElement('div', { classList: ['contenedor-title-modal'] }, [
           createElement('h2', { classList: ['modal-title'], textContent: project.name })
