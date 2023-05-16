@@ -92,157 +92,81 @@ seeProjectsButton.forEach((button) => {
   });
 });
 
-function openPopUp(project) {
-  const modal = document.createElement('div');
-  modal.classList.add('modal');
-  modal.id = 'projectDetailsModal';
-  const modalContent = document.createElement('div');
-  modalContent.classList.add('modal-content');
-  let closeBtn = document.createElement('span');
-  closeBtn.classList.add('close-btn');
-  closeBtn.id = 'close-btn-modal';
-  closeBtn.innerHTML = '<img src="img/Iconx.png">';
-  const projectDetails = document.createElement('div');
-  projectDetails.classList.add('project-details');
-  const contenTitle = document.createElement('div');
-  contenTitle.classList.add('contenedor-title-modal');
-  //HIJO --modal-title--> contenTitle
-  const modalTitle = document.createElement('h2');
-  modalTitle.classList.add('modal-title');
-  modalTitle.textContent = project.name;
-  const subtitleModal = document.createElement('p');
-  subtitleModal.classList.add('modal-subtitle');
-  //HIJO DE modal-subtitle--> modal-stack-subtitle
-  const stackModal = document.createElement('span');
-  stackModal.classList.add('modal-stack-subtitle');
-  stackModal.textContent = project.subtitle;
-  //HIJO DE modal-subtitle--> grey
-  const grey = document.createElement('span');
-  grey.classList.add('grey');
-  //HIJO DE grey--> imgIcon
-  const imgIcon = document.createElement('img');
-  imgIcon.src = './img/period.svg';
-  //HIJO DE grey--> modal-stack
-  const modalStack = document.createElement('span');
-  modalStack.classList.add('modal-stack');
-  modalStack.textContent = project.stack;
-  //HIJO DE grey--> imgIcon2
-  const imgIcon2 = document.createElement('img');
-  imgIcon2.src = './img/period.svg';
-  //HIJO DE grey--> modal-year
-  const modalYear = document.createElement('span');
-  modalYear.classList.add('modal-year');
-  modalYear.textContent = project.year;
-  const modalImgContainer = document.createElement('div');
-  modalImgContainer.classList.add('modal-img-container');
-  const modalImg = document.createElement('img');
-  modalImg.classList.add('modal-img');
-  modalImg.src = project.featuredImage;
-  const modalContainerDesktop = document.createElement('div');
-  modalContainerDesktop.classList.add('modal-container-desktop');
-  const modalContainerDescription = document.createElement('div');
-  modalContainerDescription.classList.add('modal-container-description');
-  const modalDescription = document.createElement('p');
-  modalDescription.classList.add('modal-description');
-  modalDescription.textContent = project.description;
-  const modalContainerRightButtons = document.createElement('div');
-  modalContainerRightButtons.classList.add('modal-container-right-buttons');
-  const modalButton = document.createElement('ul');
-  modalButton.classList.add('modal-buttons');
-  const modalButtonLi1 = document.createElement('li');
-  modalButtonLi1.classList.add('modal-html-li');
-  const modalButtonLi2 = document.createElement('li');
-  modalButtonLi2.classList.add('modal-css-li');
-  const modalButtonLi3 = document.createElement('li');
-  modalButtonLi3.classList.add('modal-js-li');
-  if (window.innerWidth >= 768) {
-    const modalButtonLi4 = document.createElement('li');
-    modalButtonLi4.classList.add('modal-js-li');
-    const modalButtonLi5 = document.createElement('li');
-    modalButtonLi5.classList.add('modal-js-li');
-    const modalSpan4 = document.createElement('span');
-    modalSpan4.classList.add('modal-js-span');
-    modalSpan4.textContent = project.technologies[3];
-    const modalSpan5 = document.createElement('span');
-    modalSpan5.classList.add('modal-js-span');
-    modalSpan5.textContent = project.technologies[4];
-    modalButtonLi4.appendChild(modalSpan4);
-    modalButtonLi5.appendChild(modalSpan5);
-    modalButton.appendChild(modalButtonLi4);
-    modalButton.appendChild(modalButtonLi5);
+function createElement(tag, attributes = {}, children = []) {
+  const element = document.createElement(tag);
+  for (let attr in attributes) {
+    if (attr === 'classList') {
+      attributes[attr].forEach(className => element.classList.add(className));
+    } else {
+      element[attr] = attributes[attr];
+    }
   }
-  const modalSpan1 = document.createElement('span');
-  modalSpan1.classList.add('modal-html-span');
-  modalSpan1.textContent = project.technologies[0];
-  const modalSpan2 = document.createElement('span');
-  modalSpan2.classList.add('modal-css-span');
-  modalSpan2.textContent = project.technologies[1];
-  const modalSpan3 = document.createElement('span');
-  modalSpan3.classList.add('modal-js-span');
-  modalSpan3.textContent = project.technologies[2];
-  const line = document.createElement('line');
-  line.classList.add('line');
-  const buttonContainer = document.createElement('div');
-  buttonContainer.classList.add('project-links');
-  buttonContainer.id = 'project-link-modal';
-  const liveLinkButton = document.createElement('a');
-  liveLinkButton.classList.add('project-link');
-  liveLinkButton.textContent = 'Live Link';
-  liveLinkButton.href = project.liveLink;
-  const sourceLinkButton = document.createElement('a');
-  sourceLinkButton.classList.add('project-link');
-  sourceLinkButton.textContent = 'Source Link';
-  sourceLinkButton.href = project.sourceLink;
-  const imageButton1 = document.createElement('img');
-  imageButton1.classList.add('image-button1');
-  imageButton1.src = project.buttonLive;
-  const imageButton2 = document.createElement('img');
-  imageButton2.classList.add('image-button2');
-  imageButton2.src = project.buttonSource;
-  grey.appendChild(imgIcon);
-  grey.appendChild(modalStack);
-  grey.appendChild(imgIcon2);
-  grey.appendChild(modalYear);
-  subtitleModal.appendChild(stackModal);
-  subtitleModal.appendChild(grey);
-  contenTitle.appendChild(modalTitle);
-  modalButtonLi1.appendChild(modalSpan1);
-  modalButtonLi2.appendChild(modalSpan2);
-  modalButtonLi3.appendChild(modalSpan3);
-  modalButton.appendChild(modalButtonLi1);
-  modalButton.appendChild(modalButtonLi2);
-  modalButton.appendChild(modalButtonLi3);
-  buttonContainer.appendChild(liveLinkButton);
-  liveLinkButton.appendChild(imageButton1);
-  buttonContainer.appendChild(sourceLinkButton);
-  sourceLinkButton.appendChild(imageButton2);
-  modalImgContainer.appendChild(modalImg);
-  modalContainerDescription.appendChild(modalDescription);
-  modalContainerRightButtons.appendChild(modalButton);
-  modalContainerRightButtons.appendChild(line);
-  modalContainerRightButtons.appendChild(buttonContainer);
-  modalContainerDesktop.appendChild(modalContainerDescription);
-  modalContainerDesktop.appendChild(modalContainerRightButtons);
-  projectDetails.appendChild(contenTitle);
-  projectDetails.appendChild(subtitleModal);
-  projectDetails.appendChild(modalImgContainer);
-  projectDetails.appendChild(modalContainerDesktop);
-  modalContent.appendChild(closeBtn);
-  modalContent.appendChild(projectDetails);
-  modal.appendChild(modalContent);
+  children.forEach(child => element.appendChild(child));
+  return element;
+}
+
+function openPopUp(project) {
+  const modal = createElement('div', { classList: ['modal'], id: 'projectDetailsModal' }, [
+    createElement('div', { classList: ['modal-content'] }, [
+      createElement('span', { classList: ['close-btn'], id: 'close-btn-modal', innerHTML: '<img src="img/Iconx.png">' }),
+      createElement('div', { classList: ['project-details'] }, [
+        createElement('div', { classList: ['contenedor-title-modal'] }, [
+          createElement('h2', { classList: ['modal-title'], textContent: project.name })
+        ]),
+        createElement('p', { classList: ['modal-subtitle'] }, [
+          createElement('span', { classList: ['modal-stack-subtitle'], textContent: project.subtitle }),
+          createElement('span', { classList: ['grey'] }, [
+            createElement('img', { src: './img/period.svg' }),
+            createElement('span', { classList: ['modal-stack'], textContent: project.stack }),
+            createElement('img', { src: './img/period.svg' }),
+            createElement('span', { classList: ['modal-year'], textContent: project.year }),
+          ]),
+        ]),
+        createElement('div', { classList: ['modal-img-container'] }, [
+          createElement('img', { classList: ['modal-img'], src: project.featuredImage }),
+        ]),
+        createElement('div', { classList: ['modal-container-desktop'] }, [
+          createElement('div', { classList: ['modal-container-description'] }, [
+            createElement('p', { classList: ['modal-description'], textContent: project.description }),
+          ]),
+          createElement('div', { classList: ['modal-container-right-buttons'] }, [
+            createElement('ul', { classList: ['modal-buttons'] }, 
+              project.technologies.map((tech, index) => 
+                createElement('li', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-li`] }, [
+                  createElement('span', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-span`], textContent: tech })
+                ])
+              )
+            ),
+            createElement('line', { classList: ['line'] }),
+            createElement('div', { classList: ['project-links'], id: 'project-link-modal' }, [
+              createElement('a', { classList: ['project-link'], textContent: 'Live Link', href: project.liveLink }, [
+                createElement('img', { classList: ['image-button1'], src: project.buttonLive }),
+              ]),
+              createElement('a', { classList: ['project-link'], textContent: 'Source Link', href: project.sourceLink }, [
+                createElement('img', { classList: ['image-button2'], src: project.buttonSource }),
+              ]),
+            ]),
+          ]),
+        ]),
+      ]),
+    ]),
+  ]);
+  
   document.body.appendChild(modal);
-  // Abrir el modal
+
   modal.classList.add('open');
   modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
-  // Cerrar el modal
-  closeBtn.addEventListener('click', () => {
+
+
+  modal.querySelector('.close-btn').addEventListener('click', () => {
     modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
     modal.classList.remove('open');
   });
 }
+
 function getData(id) {
   return projects.find((project) => project.id === id);
 }
-function getDataDesktop(id) {
-  return projects.find((project) => project.id === id).desktopData;
-}
+
+
+
