@@ -82,7 +82,7 @@ let projectLinkContainer = document.querySelector('.project-link-container');
 
 // console.log(projectLinkContainer);
 
-const seeProjectsButton = document.querySelectorAll(
+/*const seeProjectsButton = document.querySelectorAll(
   '[data-see-project-button]'
 );
 
@@ -95,58 +95,58 @@ seeProjectsButton.forEach((button) => {
       openPopUpDesktop(projectData);
     }
   });
-});
+});*/
 
-// projectButton1.addEventListener('click', () => {
-//   openPopUp(projectButton1.id);
-// });
+projectButton1.addEventListener('click', () => {
+   openPopUp(projectButton1.id);
+ });
 
-// projectButton2.addEventListener('click', () => {
-//   openPopUp(projectButton2.id);
-// });
+ projectButton2.addEventListener('click', () => {
+   openPopUp(projectButton2.id);
+ });
 
-// projectButton3.addEventListener('click', () => {
-//   openPopUp(projectButton3.id);
-// });
+ projectButton3.addEventListener('click', () => {
+   openPopUp(projectButton3.id);
+ });
 
-// projectButton4.addEventListener('click', () => {
-//   openPopUp(projectButton4.id);
-// });
+ projectButton4.addEventListener('click', () => {
+   openPopUp(projectButton4.id);
+ });
 
-// projectButton1.addEventListener('click', () => {
-//   if (window.innerWidth <= 768) {
-//     openPopUp(projectButton1.id);
-//     const projectData = getDataDesktop(projectButton1.id);
-//     openPopUpDesktop(projectData);
-//   }
-// });
+ projectButton1.addEventListener('click', () => {
+   if (window.innerWidth <= 768) {
+     openPopUp(projectButton1.id);
+     const projectData = getDataDesktop(projectButton1.id);
+     openPopUpDesktop(projectData);
+   }
+ });
 
-// projectButton2.addEventListener('click', () => {
-//   if (window.innerWidth <= 768) {
-//     openPopUp(projectButton2.id);
-//   } else {
-//     const projectData = getDataDesktop(projectButton2.id);
-//     openPopUpDesktop(projectData);
-//   }
-// });
+ projectButton2.addEventListener('click', () => {
+   if (window.innerWidth <= 768) {
+     openPopUp(projectButton2.id);
+   } else {
+     const projectData = getDataDesktop(projectButton2.id);
+     openPopUpDesktop(projectData);
+   }
+ });
 
-// projectButton3.addEventListener('click', () => {
-//   if (window.innerWidth <= 768) {
-//     openPopUp(projectButton3.id);
-//   } else {
-//     const projectData = getDataDesktop(projectButton3.id);
-//     openPopUpDesktop(projectData);
-//   }
-// });
+ projectButton3.addEventListener('click', () => {
+   if (window.innerWidth <= 768) {
+     openPopUp(projectButton3.id);
+   } else {
+     const projectData = getDataDesktop(projectButton3.id);
+     openPopUpDesktop(projectData);
+   }
+ });
 
-// projectButton4.addEventListener('click', () => {
-//   if (window.innerWidth <= 768) {
-//     openPopUp(projectButton4.id);
-//   } else {
-//     const projectData = getDataDesktop(projectButton4.id);
-//     openPopUpDesktop(projectData);
-//   }
-// });
+ projectButton4.addEventListener('click', () => {
+   if (window.innerWidth <= 768) {
+     openPopUp(projectButton4.id);
+   } else {
+     const projectData = getDataDesktop(projectButton4.id);
+     openPopUpDesktop(projectData);
+   }
+ });
 
 function openPopUp(projectData) {
   const getId = getData(projectData);
