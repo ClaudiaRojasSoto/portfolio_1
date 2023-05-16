@@ -130,7 +130,6 @@ ul {
   width: 100%;
   height: 100%;
   overflow: auto;
-  width: 100%;
   background-color: rgba(0, 0, 0, 0.64);
   backdrop-filter: blur(4px);
 }
@@ -180,20 +179,27 @@ ul {
 
 .modal-subtitle {
   font-size: 13px;
-
   line-height: 16px;
+}
+
+.grey {
+  color: #7a869a;
 }
 
 .modal-subtitle .grey {
   color: #7a869a;
 }
 
-.modal-subtitle .grey img {
-  margin: 0 3px;
+.grey img {
+  margin: 0 3% 0 3%;
 }
 
 .project-image img {
   width: 100%;
+}
+
+.modal-subtitle .grey img {
+  margin: 0 3px;
 }
 
 .modal-description {
@@ -314,14 +320,6 @@ ul {
   line-height: 16px;
 }
 
-.grey {
-  color: #7a869a;
-}
-
-.grey img {
-  margin: 0 3% 0 3%;
-}
-
 .card p {
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -387,8 +385,7 @@ ul {
   border-radius: 16px;
   margin-top: 30px;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .project-link-container {
@@ -456,8 +453,7 @@ ul {
   border-radius: 16px;
   margin-bottom: 5%;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .button-about-me:hover {
@@ -588,8 +584,7 @@ ul {
   padding: 15px 8px 15px 8px;
   margin-bottom: 10%;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
-    border-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 
 .button-form:hover {
@@ -641,6 +636,10 @@ ul {
 
   .my-nav {
     padding-left: 10%;
+  }
+
+  .modal-buttons li {
+    text-align: center;
   }
 
   .nav-desktop ul li {
@@ -887,5 +886,50 @@ ul {
 
   .input-contact-me:hover {
     transform: translateX(10px);
+  }
+
+  .modal {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.64);
+    backdrop-filter: blur(4px);
+  }
+
+  .modal-content {
+    max-width: 90%;
+    margin-top: 15%;
+    height: 1163px;
+  }
+
+  .modal-img-container {
+    width: 100%;
+    height: 650px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .modal-img {
+    width: 100%;
+    position: absolute;
+    bottom: -20%;
+  }
+
+  .modal-container-desktop {
+    display: grid;
+    grid-template-columns: 70% 30%;
+  }
+
+  .modal-container-description {
+    background-color: lightblue;
+    padding-top: 10%;
+  }
+
+  .modal-container-right-buttons {
+    background-color: pink;
+    padding-top: 10%;
+  }
+
+  .modal-buttons {
+    display: flex;
+    flex-wrap: wrap;
   }
 }
