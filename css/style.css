@@ -967,3 +967,9 @@ ul {
     padding-left: 22px;
   }
 }
+
+@media (max-width: 768px) {
+  .card .card-buttons li:nth-child(n+4) {
+    display: none; /* Ocultar tecnologías a partir del cuarto elemento en tamaño de pantalla móvil */
+  }
+}
