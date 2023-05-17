@@ -106,7 +106,10 @@ function createCards(projects) {
 
     const card = createElement('div', { classList: ['card'] });
 
-    const bgImg = createElement('div', { classList: [`bg-img${index + 1}`] });
+    const bgImg = createElement('div', {
+      classList: [`bg-img${index + 1}`],
+      id: (window.innerWidth > 768 && (index === 1 || index === 3)) ? 'img2' : ''
+    });
     card.appendChild(bgImg);
 
     const img = createElement('img', { classList: ['principal-img'], src: projectData.featuredImage, alt: 'Project image' });
@@ -202,10 +205,19 @@ function openPopUp(project) {
             createElement('p', { classList: ['modal-description'], textContent: project.description2 }),
           ]),
           createElement('div', { classList: ['modal-container-right-buttons'] }, [
-            createElement('ul', { classList: ['modal-buttons'] },
-              project.technologies.map((tech, index) => createElement('li', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-li`] }, [
-                createElement('span', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-span`], textContent: tech }),
-              ]))),
+            createElement('ul', { classList: ['modal-buttons'] }, [
+              ...(window.innerWidth <= 768
+                ? project.technologies.slice(0, 3).map((tech, index) =>
+                    createElement('li', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-li`] }, [
+                      createElement('span', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-span`], textContent: tech }),
+                    ])
+                  )
+                : project.technologies.map((tech, index) =>
+                    createElement('li', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-li`] }, [
+                      createElement('span', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-span`], textContent: tech }),
+                    ])
+                  )),
+            ]),
             createElement('div', { classList: ['line'] }),
             createElement('div', { classList: ['project-links'], id: 'project-link-modal' }, [
               createElement('a', { classList: ['project-link'], textContent: 'Live Link', href: project.liveLink }, [
@@ -231,6 +243,8 @@ function openPopUp(project) {
     modal.classList.remove('open');
   });
 }
+
+
 
 // Crear las tarjetas de proyectos
 createCards(projects);

@@ -973,3 +973,9 @@ ul {
     display: none; /* Ocultar tecnologías a partir del cuarto elemento en tamaño de pantalla móvil */
   }
 }
+
+@media (max-width: 768px) {
+  .modal-container-desktop .modal-buttons li:nth-child(n+4) {
+    display: none;
+  }
+}
