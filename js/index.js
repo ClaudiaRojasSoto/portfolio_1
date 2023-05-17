@@ -77,6 +77,9 @@ const mobileMenuModulesCreator = (() => {
 })();
 
 
+
+
+//Cards
 function createElement(tag, attributes = {}, children = []) {
   const element = document.createElement(tag);
 
@@ -97,36 +100,38 @@ function createCards(projects) {
   const cardList = document.getElementById('portfolio');
 
   projects.forEach((project, index) => {
+    const projectData = window.innerWidth <= 768 ? project : project.desktopData;
+
     const card = createElement('div', { classList: ['card'] });
 
     const bgImg = createElement('div', { classList: [`bg-img${index + 1}`] });
     card.appendChild(bgImg);
 
-    const img = createElement('img', { classList: ['principal-img'], src: project.featuredImage, alt: 'Project image' });
+    const img = createElement('img', { classList: ['principal-img'], src: projectData.featuredImage, alt: 'Project image' });
     bgImg.appendChild(img);
 
     const contentCardDesktop = createElement('div', { classList: ['content-card-desktop'] });
     card.appendChild(contentCardDesktop);
 
-    const title = createElement('h2', {}, [document.createTextNode(project.name)]);
+    const title = createElement('h2', {}, [document.createTextNode(projectData.name)]);
     contentCardDesktop.appendChild(title);
 
     const subtitle = createElement('p', { classList: ['subtitle'] }, [
-      document.createTextNode(project.subtitle),
+      document.createTextNode(projectData.subtitle),
       createElement('span', { classList: ['grey'] }, [
-        createElement('img', { src: project.point, alt: 'Grey period in text' }),
-        document.createTextNode(project.stack),
-        createElement('img', { src: project.point2, alt: 'Grey period in text' }),
-        document.createTextNode(project.year)
+        createElement('img', { src: projectData.point, alt: 'Grey period in text' }),
+        document.createTextNode(projectData.stack),
+        createElement('img', { src: projectData.point2, alt: 'Grey period in text' }),
+        document.createTextNode(projectData.year)
       ])
     ]);
     contentCardDesktop.appendChild(subtitle);
 
-    const description = createElement('p', {}, [document.createTextNode(project.description)]);
+    const description = createElement('p', {}, [document.createTextNode(projectData.description)]);
     contentCardDesktop.appendChild(description);
 
     const buttonList = createElement('ul', { classList: ['card-buttons'] });
-    project.technologies.forEach((technology) => {
+    projectData.technologies.forEach((technology) => {
       const buttonItem = createElement('li', {});
       const button = createElement('button', {}, [document.createTextNode(technology)]);
       buttonItem.appendChild(button);
