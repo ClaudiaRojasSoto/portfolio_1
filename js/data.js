@@ -26,9 +26,8 @@ export const projects = [
           'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
           'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer ' +
           'took a galley of type and scrambled it 1960s. Lorem <br> Ipsum is simply dummy text of the printing and typesetting industry. ' +
-          'Lorem Ipsum has been the industry\'s '+
-          ''+
-          'standard dummy text ever since the 1500s, when an unknown printer took a galley of ' +
+          'Lorem Ipsum has been the industry\'s ',
+        description2: 'standard dummy text ever since the 1500s, when an unknown printer took a galley of ' +
           'type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. ' +
           'Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type ' +
           'and scrambled it 1960s.',
