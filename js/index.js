@@ -128,6 +128,7 @@ function openPopUp(project) {
         createElement('div', { classList: ['modal-container-desktop'] }, [
           createElement('div', { classList: ['modal-container-description'] }, [
             createElement('p', { classList: ['modal-description'], textContent: project.description }),
+            createElement('p', { classList: ['modal-description'], textContent: project.description2 }),
           ]),
           createElement('div', { classList: ['modal-container-right-buttons'] }, [
             createElement('ul', { classList: ['modal-buttons'] }, 
@@ -137,7 +138,7 @@ function openPopUp(project) {
                 ])
               )
             ),
-            createElement('line', { classList: ['line'] }),
+            createElement('div', { classList: ['line'] }),
             createElement('div', { classList: ['project-links'], id: 'project-link-modal' }, [
               createElement('a', { classList: ['project-link'], textContent: 'Live Link', href: project.liveLink }, [
                 createElement('img', { classList: ['image-button1'], src: project.buttonLive }),
@@ -151,6 +152,7 @@ function openPopUp(project) {
       ]),
     ]),
   ]);
+  
   
   document.body.appendChild(modal);
 
