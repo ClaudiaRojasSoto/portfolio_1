@@ -1,4 +1,4 @@
-import { projects } from './data.js';
+import projects from './data.js';
 
 const mobileMenuModulesCreator = (() => {
   const nav = document.querySelector('.my-nav');
@@ -28,7 +28,7 @@ const mobileMenuModulesCreator = (() => {
         event.preventDefault();
         const targetSection = document.querySelector(item.getAttribute('href'));
         targetSection.scrollIntoView({
-          behavior: 'smooth'
+          behavior: 'smooth',
         });
         mobileMenuModulesCreator.closeMenu();
       });
@@ -65,7 +65,7 @@ const mobileMenuModulesCreator = (() => {
   }
   return {
     openMenu,
-    closeMenu
+    closeMenu,
   };
 })();
 
@@ -76,32 +76,28 @@ const mobileMenuModulesCreator = (() => {
   });
 })();
 
+// Popup
+function getData(id) {
+  return projects.find((project) => project.id === id);
+}
 
-
-//Popup
 const seeProjectsButton = document.querySelectorAll(
-  '[data-see-project-button]'
+  '[data-see-project-button]',
 );
-
-seeProjectsButton.forEach((button) => {
-  button.addEventListener("click", () => {
-    const projectId = button.id;
-    const projectData = getData(projectId);
-    const project = (window.innerWidth <= 768) ? projectData : projectData.desktopData;
-    openPopUp(project);
-  });
-});
 
 function createElement(tag, attributes = {}, children = []) {
   const element = document.createElement(tag);
-  for (let attr in attributes) {
-    if (attr === 'classList') {
-      attributes[attr].forEach(className => element.classList.add(className));
+
+  Object.entries(attributes).forEach(([key, value]) => {
+    if (key === 'classList') {
+      value.forEach((className) => element.classList.add(className));
     } else {
-      element[attr] = attributes[attr];
+      element[key] = value;
     }
-  }
-  children.forEach(child => element.appendChild(child));
+  });
+
+  children.forEach((child) => element.appendChild(child));
+
   return element;
 }
 
@@ -111,7 +107,7 @@ function openPopUp(project) {
       createElement('span', { classList: ['close-btn'], id: 'close-btn-modal', innerHTML: '<img src="img/IconXpop.svg">' }),
       createElement('div', { classList: ['project-details'] }, [
         createElement('div', { classList: ['contenedor-title-modal'] }, [
-          createElement('h2', { classList: ['modal-title'], textContent: project.name })
+          createElement('h2', { classList: ['modal-title'], textContent: project.name }),
         ]),
         createElement('p', { classList: ['modal-subtitle'] }, [
           createElement('span', { classList: ['modal-stack-subtitle'], textContent: project.subtitle }),
@@ -131,13 +127,10 @@ function openPopUp(project) {
             createElement('p', { classList: ['modal-description'], textContent: project.description2 }),
           ]),
           createElement('div', { classList: ['modal-container-right-buttons'] }, [
-            createElement('ul', { classList: ['modal-buttons'] }, 
-              project.technologies.map((tech, index) => 
-                createElement('li', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-li`] }, [
-                  createElement('span', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-span`], textContent: tech })
-                ])
-              )
-            ),
+            createElement('ul', { classList: ['modal-buttons'] },
+              project.technologies.map((tech, index) => createElement('li', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-li`] }, [
+                createElement('span', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-span`], textContent: tech }),
+              ]))),
             createElement('div', { classList: ['line'] }),
             createElement('div', { classList: ['project-links'], id: 'project-link-modal' }, [
               createElement('a', { classList: ['project-link'], textContent: 'Live Link', href: project.liveLink }, [
@@ -152,13 +145,11 @@ function openPopUp(project) {
       ]),
     ]),
   ]);
-  
-  
+
   document.body.appendChild(modal);
 
   modal.classList.add('open');
   modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
-
 
   modal.querySelector('.close-btn').addEventListener('click', () => {
     modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
@@ -166,9 +157,11 @@ function openPopUp(project) {
   });
 }
 
-function getData(id) {
-  return projects.find((project) => project.id === id);
-}
-
-
-
+seeProjectsButton.forEach((button) => {
+  button.addEventListener('click', () => {
+    const projectId = button.id;
+    const projectData = getData(projectId);
+    const project = (window.innerWidth <= 768) ? projectData : projectData.desktopData;
+    openPopUp(project);
+  });
+});
