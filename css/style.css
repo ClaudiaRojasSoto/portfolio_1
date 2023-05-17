@@ -202,8 +202,17 @@ ul {
   margin: 0 3px;
 }
 
+.modal-img-container {
+  width: 100%;
+}
+
+.modal-img {
+  width: 100%;
+}
+
 .modal-description {
   line-height: 24px;
+  margin-bottom: 4%;
 }
 
 .modal-buttons {
@@ -640,6 +649,7 @@ ul {
 
   .modal-buttons li {
     text-align: center;
+    margin-top: 10px;
   }
 
   .nav-desktop ul li {
@@ -909,27 +919,51 @@ ul {
 
   .modal-img {
     width: 100%;
-    position: absolute;
     bottom: -20%;
   }
 
   .modal-container-desktop {
     display: grid;
     grid-template-columns: 70% 30%;
+    gap: 1%;
   }
 
   .modal-container-description {
-    background-color: lightblue;
     padding-top: 10%;
+    padding-right: 20px;
   }
 
   .modal-container-right-buttons {
-    background-color: pink;
     padding-top: 10%;
   }
 
   .modal-buttons {
     display: flex;
     flex-wrap: wrap;
+    padding-right: 25%;
+    margin-top: 10%;
+  }
+
+  #project-link-modal {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0;
+  }
+
+  .line {
+    padding-bottom: 0;
+  }
+
+  .image-button1 {
+    margin: 0 6px;
+  }
+
+  .image-button2 {
+    margin: 0 6px;
+  }
+
+  .project-link {
+    padding-right: 22px;
+    padding-left: 22px;
   }
 }
