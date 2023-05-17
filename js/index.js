@@ -76,29 +76,91 @@ const mobileMenuModulesCreator = (() => {
   });
 })();
 
-// Popup
-function getData(id) {
-  return projects.find((project) => project.id === id);
-}
-
-const seeProjectsButton = document.querySelectorAll(
-  '[data-see-project-button]',
-);
 
 function createElement(tag, attributes = {}, children = []) {
   const element = document.createElement(tag);
 
-  Object.entries(attributes).forEach(([key, value]) => {
-    if (key === 'classList') {
-      value.forEach((className) => element.classList.add(className));
+  for (let attr in attributes) {
+    if (attr === 'classList') {
+      attributes[attr].forEach(className => element.classList.add(className));
     } else {
-      element[key] = value;
+      element[attr] = attributes[attr];
     }
-  });
+  }
 
-  children.forEach((child) => element.appendChild(child));
+  children.forEach(child => element.appendChild(child));
 
   return element;
+}
+
+function createCards(projects) {
+  const cardList = document.getElementById('portfolio');
+
+  projects.forEach((project, index) => {
+    const card = createElement('div', { classList: ['card'] });
+
+    const bgImg = createElement('div', { classList: [`bg-img${index + 1}`] });
+    card.appendChild(bgImg);
+
+    const img = createElement('img', { classList: ['principal-img'], src: project.featuredImage, alt: 'Project image' });
+    bgImg.appendChild(img);
+
+    const contentCardDesktop = createElement('div', { classList: ['content-card-desktop'] });
+    card.appendChild(contentCardDesktop);
+
+    const title = createElement('h2', {}, [document.createTextNode(project.name)]);
+    contentCardDesktop.appendChild(title);
+
+    const subtitle = createElement('p', { classList: ['subtitle'] }, [
+      document.createTextNode(project.subtitle),
+      createElement('span', { classList: ['grey'] }, [
+        createElement('img', { src: project.point, alt: 'Grey period in text' }),
+        document.createTextNode(project.stack),
+        createElement('img', { src: project.point2, alt: 'Grey period in text' }),
+        document.createTextNode(project.year)
+      ])
+    ]);
+    contentCardDesktop.appendChild(subtitle);
+
+    const description = createElement('p', {}, [document.createTextNode(project.description)]);
+    contentCardDesktop.appendChild(description);
+
+    const buttonList = createElement('ul', { classList: ['card-buttons'] });
+    project.technologies.forEach((technology) => {
+      const buttonItem = createElement('li', {});
+      const button = createElement('button', {}, [document.createTextNode(technology)]);
+      buttonItem.appendChild(button);
+      buttonList.appendChild(buttonItem);
+    });
+    contentCardDesktop.appendChild(buttonList);
+
+    const projectLinkContainer = createElement('div', { classList: ['project-link-container'] });
+    contentCardDesktop.appendChild(projectLinkContainer);
+
+    const projectLink = createElement('a', {
+      id: `projectButton${index + 1}`,
+      href: '#',
+      classList: ['project-link'],
+      'data-see-project-button': ''
+    }, [document.createTextNode('See project')]);
+    projectLink.addEventListener('click', handleProjectButtonClick);
+    projectLinkContainer.appendChild(projectLink);
+
+    cardList.appendChild(card);
+  });
+}
+
+function handleProjectButtonClick(event) {
+  event.preventDefault();
+  const button = event.target;
+  const projectId = button.id;
+  const project = getData(projectId);
+  const projectData = window.innerWidth <= 768 ? project : project.desktopData;
+  openPopUp(projectData);
+}
+
+function getData(id) {
+  return projects.find((project) => project.id === id);
 }
 
 function openPopUp(project) {
@@ -149,19 +211,23 @@ function openPopUp(project) {
   document.body.appendChild(modal);
 
   modal.classList.add('open');
-  modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+  modal.style.display = 'block';
 
   modal.querySelector('.close-btn').addEventListener('click', () => {
-    modal.style.display = modal.style.display === 'block' ? 'none' : 'block';
+    modal.style.display = 'none';
     modal.classList.remove('open');
   });
 }
+
+createCards(projects);
+
+const seeProjectsButton = document.querySelectorAll('[data-see-project-button]');
 
 seeProjectsButton.forEach((button) => {
   button.addEventListener('click', () => {
     const projectId = button.id;
     const projectData = getData(projectId);
-    const project = (window.innerWidth <= 768) ? projectData : projectData.desktopData;
+    const project = window.innerWidth <= 768 ? projectData : projectData.desktopData;
     openPopUp(project);
   });
 });
