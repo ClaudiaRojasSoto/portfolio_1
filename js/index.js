@@ -76,7 +76,6 @@ const mobileMenuModulesCreator = (() => {
   });
 })();
 
-// Cards
 function createElement(tag, attributes = {}, children = []) {
   const element = document.createElement(tag);
 
@@ -87,6 +86,7 @@ function createElement(tag, attributes = {}, children = []) {
       element[attr] = attributes[attr];
     }
   });
+
   children.forEach((child) => element.appendChild(child));
 
   return element;
@@ -97,151 +97,49 @@ function getData(id) {
 }
 
 function openPopUp(project) {
-  const modal = createElement(
-    'div',
-    { classList: ['modal'], id: 'projectDetailsModal' },
-    [
-      createElement('div', { classList: ['modal-content'] }, [
-        createElement('span', {
-          classList: ['close-btn'],
-          id: 'close-btn-modal',
-          innerHTML: '<img src="img/IconXpop.svg">',
-        }),
-        createElement('div', { classList: ['project-details'] }, [
-          createElement('div', { classList: ['contenedor-title-modal'] }, [
-            createElement('h2', {
-              classList: ['modal-title'],
-              textContent: project.name,
-            }),
+  const modal = createElement('div', { classList: ['modal'], id: 'projectDetailsModal' }, [
+    createElement('div', { classList: ['modal-content'] }, [
+      createElement('span', { classList: ['close-btn'], id: 'close-btn-modal', innerHTML: '<img src="img/IconXpop.svg">' }),
+      createElement('div', { classList: ['project-details'] }, [
+        createElement('div', { classList: ['contenedor-title-modal'] }, [
+          createElement('h2', { classList: ['modal-title'], textContent: project.name }),
+        ]),
+        createElement('p', { classList: ['modal-subtitle'] }, [
+          createElement('span', { classList: ['modal-stack-subtitle'], textContent: project.subtitle }),
+          createElement('span', { classList: ['grey'] }, [
+            createElement('img', { src: './img/period.svg' }),
+            createElement('span', { classList: ['modal-stack'], textContent: project.stack }),
+            createElement('img', { src: './img/period.svg' }),
+            createElement('span', { classList: ['modal-year'], textContent: project.year }),
           ]),
-          createElement('p', { classList: ['modal-subtitle'] }, [
-            createElement('span', {
-              classList: ['modal-stack-subtitle'],
-              textContent: project.subtitle,
-            }),
-            createElement('span', { classList: ['grey'] }, [
-              createElement('img', { src: './img/period.svg' }),
-              createElement('span', {
-                classList: ['modal-stack'],
-                textContent: project.stack,
-              }),
-              createElement('img', { src: './img/period.svg' }),
-              createElement('span', {
-                classList: ['modal-year'],
-                textContent: project.year,
-              }),
+        ]),
+        createElement('div', { classList: ['modal-img-container'] }, [
+          createElement('img', { classList: ['modal-img'], src: project.featuredImage }),
+        ]),
+        createElement('div', { classList: ['modal-container-desktop'] }, [
+          createElement('div', { classList: ['modal-container-description'] }, [
+            createElement('p', { classList: ['modal-description'], textContent: project.description }),
+            createElement('p', { classList: ['modal-description'], textContent: project.description2 }),
+          ]),
+          createElement('div', { classList: ['modal-container-right-buttons'] }, [
+            createElement('ul', { classList: ['modal-buttons'] },
+              project.technologies.map((tech, index) => createElement('li', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-li`] }, [
+                createElement('span', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-span`], textContent: tech }),
+              ]))),
+            createElement('div', { classList: ['line'] }),
+            createElement('div', { classList: ['project-links'], id: 'project-link-modal' }, [
+              createElement('a', { classList: ['project-link'], textContent: 'Live Link', href: project.liveLink }, [
+                createElement('img', { classList: ['image-button1'], src: project.buttonLive }),
+              ]),
+              createElement('a', { classList: ['project-link'], textContent: 'Source Link', href: project.sourceLink }, [
+                createElement('img', { classList: ['image-button2'], src: project.buttonSource }),
+              ]),
             ]),
-          ]),
-          createElement('div', { classList: ['modal-img-container'] }, [
-            createElement('img', {
-              classList: ['modal-img'],
-              src: project.featuredImage,
-            }),
-          ]),
-          createElement('div', { classList: ['modal-container-desktop'] }, [
-            createElement(
-              'div',
-              { classList: ['modal-container-description'] },
-              [
-                createElement('p', {
-                  classList: ['modal-description'],
-                  textContent: project.description,
-                }),
-                createElement('p', {
-                  classList: ['modal-description'],
-                  textContent: project.description2,
-                }),
-              ],
-            ),
-            createElement(
-              'div',
-              { classList: ['modal-container-right-buttons'] },
-              [
-                createElement('ul', { classList: ['modal-buttons'] }, [
-                  ...(window.innerWidth <= 768
-                    ? project.technologies.slice(0, 3).map((tech, index) => createElement(
-                      'li',
-                      {
-                        classList: [
-                          `modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'
-                          }-li`,
-                        ],
-                      },
-                      [
-                        createElement('span', {
-                          classList: [
-                            `modal-${index < 3
-                              ? ['html', 'css', 'js'][index]
-                              : 'js'
-                            }-span`,
-                          ],
-                          textContent: tech,
-                        }),
-                      ],
-                    ))
-                    : project.technologies.map((tech, index) => createElement(
-                      'li',
-                      {
-                        classList: [
-                          `modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'
-                          }-li`,
-                        ],
-                      },
-                      [
-                        createElement('span', {
-                          classList: [
-                            `modal-${index < 3
-                              ? ['html', 'css', 'js'][index]
-                              : 'js'
-                            }-span`,
-                          ],
-                          textContent: tech,
-                        }),
-                      ],
-                    ))),
-                ]),
-                createElement('div', { classList: ['line'] }),
-                createElement(
-                  'div',
-                  { classList: ['project-links'], id: 'project-link-modal' },
-                  [
-                    createElement(
-                      'a',
-                      {
-                        classList: ['project-link'],
-                        textContent: 'Live Link',
-                        href: project.liveLink,
-                      },
-                      [
-                        createElement('img', {
-                          classList: ['image-button1'],
-                          src: project.buttonLive,
-                        }),
-                      ],
-                    ),
-                    createElement(
-                      'a',
-                      {
-                        classList: ['project-link'],
-                        textContent: 'Source Link',
-                        href: project.sourceLink,
-                      },
-                      [
-                        createElement('img', {
-                          classList: ['image-button2'],
-                          src: project.buttonSource,
-                        }),
-                      ],
-                    ),
-                  ],
-                ),
-              ],
-            ),
           ]),
         ]),
       ]),
-    ],
-  );
+    ]),
+  ]);
 
   document.body.appendChild(modal);
 
@@ -273,80 +171,54 @@ function createCards(projects) {
 
     const bgImg = createElement('div', {
       classList: [`bg-img${index + 1}`],
-      id: window.innerWidth > 768 && (index === 1 || index === 3) ? 'img2' : '',
+      id: (window.innerWidth > 768 && (index === 1 || index === 3)) ? 'img2' : '',
     });
     card.appendChild(bgImg);
 
-    const img = createElement('img', {
-      classList: ['principal-img'],
-      src: projectData.featuredImage,
-      alt: 'Project image',
-    });
+    const img = createElement('img', { classList: ['principal-img'], src: projectData.featuredImage, alt: 'Project image' });
     bgImg.appendChild(img);
 
-    const contentCardDesktop = createElement('div', {
-      classList: ['content-card-desktop'],
-    });
+    const contentCardDesktop = createElement('div', { classList: ['content-card-desktop'] });
     card.appendChild(contentCardDesktop);
 
-    const title = createElement('h2', {}, [
-      document.createTextNode(projectData.name),
-    ]);
+    const title = createElement('h2', {}, [document.createTextNode(projectData.name)]);
     contentCardDesktop.appendChild(title);
 
     const subtitle = createElement('p', { classList: ['subtitle'] }, [
       document.createTextNode(projectData.subtitle),
       createElement('span', { classList: ['grey'] }, [
-        createElement('img', {
-          src: projectData.point,
-          alt: 'Grey period in text',
-        }),
+        createElement('img', { src: projectData.point, alt: 'Grey period in text' }),
         document.createTextNode(projectData.stack),
-        createElement('img', {
-          src: projectData.point2,
-          alt: 'Grey period in text',
-        }),
+        createElement('img', { src: projectData.point2, alt: 'Grey period in text' }),
         document.createTextNode(projectData.year),
       ]),
     ]);
     contentCardDesktop.appendChild(subtitle);
 
-    const description = createElement('p', {}, [
-      document.createTextNode(projectData.description),
-    ]);
+    const description = createElement('p', {}, [document.createTextNode(projectData.description)]);
     contentCardDesktop.appendChild(description);
 
     const buttonList = createElement('ul', { classList: ['card-buttons'] });
-    const technologies = window.innerWidth <= 768
-      ? projectData.technologies.slice(0, 3)
-      : project.desktopData.technologies.slice(0, 4);
+    const technologies = window.innerWidth <= 768 ? projectData.technologies.slice(0, 3) : project.desktopData.technologies.slice(0, 4);
 
     technologies.forEach((technology) => {
       const buttonItem = createElement('li', {});
-      const button = createElement('button', {}, [
-        document.createTextNode(technology),
-      ]);
+      const button = createElement('button', {}, [document.createTextNode(technology)]);
       buttonItem.appendChild(button);
       buttonList.appendChild(buttonItem);
     });
 
     contentCardDesktop.appendChild(buttonList);
 
-    const projectLinkContainer = createElement('div', {
-      classList: ['project-link-container'],
-    });
+    const projectLinkContainer = createElement('div', { classList: ['project-link-container'] });
     contentCardDesktop.appendChild(projectLinkContainer);
 
-    const projectLink = createElement(
-      'a',
-      {
-        id: `projectButton${index + 1}`,
-        href: '#',
-        classList: ['project-link'],
-        'data-see-project-button': '',
-      },
-      [document.createTextNode('See project')],
-    );
+    const projectLink = createElement('a', {
+      id: `projectButton${index + 1}`,
+      href: '#',
+      classList: ['project-link'],
+      'data-see-project-button': '',
+    }, [document.createTextNode('See project')]);
     projectLink.addEventListener('click', handleProjectButtonClick);
     projectLinkContainer.appendChild(projectLink);
 
@@ -356,9 +228,7 @@ function createCards(projects) {
 
 createCards(projects);
 
-const seeProjectsButton = document.querySelectorAll(
-  '[data-see-project-button]',
-);
+const seeProjectsButton = document.querySelectorAll('[data-see-project-button]');
 
 seeProjectsButton.forEach((button) => {
   button.addEventListener('click', () => {
