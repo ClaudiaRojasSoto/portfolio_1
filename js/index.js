@@ -80,6 +80,7 @@ const mobileMenuModulesCreator = (() => {
 
 
 //Cards
+// Función para crear elementos HTML
 function createElement(tag, attributes = {}, children = []) {
   const element = document.createElement(tag);
 
@@ -96,6 +97,7 @@ function createElement(tag, attributes = {}, children = []) {
   return element;
 }
 
+// Función para crear las tarjetas de proyectos
 function createCards(projects) {
   const cardList = document.getElementById('portfolio');
 
@@ -131,12 +133,15 @@ function createCards(projects) {
     contentCardDesktop.appendChild(description);
 
     const buttonList = createElement('ul', { classList: ['card-buttons'] });
-    projectData.technologies.forEach((technology) => {
+    const technologies = window.innerWidth <= 768 ? projectData.technologies.slice(0, 3) : project.desktopData.technologies.slice(0, 4);
+
+    technologies.forEach((technology) => {
       const buttonItem = createElement('li', {});
       const button = createElement('button', {}, [document.createTextNode(technology)]);
       buttonItem.appendChild(button);
       buttonList.appendChild(buttonItem);
     });
+
     contentCardDesktop.appendChild(buttonList);
 
     const projectLinkContainer = createElement('div', { classList: ['project-link-container'] });
@@ -155,6 +160,7 @@ function createCards(projects) {
   });
 }
 
+// Función para manejar el evento de clic en el botón "See project"
 function handleProjectButtonClick(event) {
   event.preventDefault();
   const button = event.target;
@@ -164,10 +170,12 @@ function handleProjectButtonClick(event) {
   openPopUp(projectData);
 }
 
+// Función para obtener los datos del proyecto por su ID
 function getData(id) {
   return projects.find((project) => project.id === id);
 }
 
+// Función para abrir el pop-up con los detalles del proyecto
 function openPopUp(project) {
   const modal = createElement('div', { classList: ['modal'], id: 'projectDetailsModal' }, [
     createElement('div', { classList: ['modal-content'] }, [
@@ -224,10 +232,13 @@ function openPopUp(project) {
   });
 }
 
+// Crear las tarjetas de proyectos
 createCards(projects);
 
+// Obtener todos los botones "See project"
 const seeProjectsButton = document.querySelectorAll('[data-see-project-button]');
 
+// Agregar el evento de clic a cada botón "See project"
 seeProjectsButton.forEach((button) => {
   button.addEventListener('click', () => {
     const projectId = button.id;
