@@ -171,54 +171,80 @@ function createCards(projects) {
 
     const bgImg = createElement('div', {
       classList: [`bg-img${index + 1}`],
-      id: (window.innerWidth > 768 && (index === 1 || index === 3)) ? 'img2' : '',
+      id: window.innerWidth > 768 && (index === 1 || index === 3) ? 'img2' : '',
     });
     card.appendChild(bgImg);
 
-    const img = createElement('img', { classList: ['principal-img'], src: projectData.featuredImage, alt: 'Project image' });
+    const img = createElement('img', {
+      classList: ['principal-img'],
+      src: projectData.featuredImage,
+      alt: 'Project image',
+    });
     bgImg.appendChild(img);
 
-    const contentCardDesktop = createElement('div', { classList: ['content-card-desktop'] });
+    const contentCardDesktop = createElement('div', {
+      classList: ['content-card-desktop'],
+    });
     card.appendChild(contentCardDesktop);
 
-    const title = createElement('h2', {}, [document.createTextNode(projectData.name)]);
+    const title = createElement('h2', {}, [
+      document.createTextNode(projectData.name),
+    ]);
     contentCardDesktop.appendChild(title);
 
     const subtitle = createElement('p', { classList: ['subtitle'] }, [
       document.createTextNode(projectData.subtitle),
       createElement('span', { classList: ['grey'] }, [
-        createElement('img', { src: projectData.point, alt: 'Grey period in text' }),
+        createElement('img', {
+          src: projectData.point,
+          alt: 'Grey period in text',
+        }),
         document.createTextNode(projectData.stack),
-        createElement('img', { src: projectData.point2, alt: 'Grey period in text' }),
+        createElement('img', {
+          src: projectData.point2,
+          alt: 'Grey period in text',
+        }),
         document.createTextNode(projectData.year),
       ]),
     ]);
     contentCardDesktop.appendChild(subtitle);
 
-    const description = createElement('p', {}, [document.createTextNode(projectData.description)]);
+    const description = createElement('p', {}, [
+      document.createTextNode(projectData.description),
+    ]);
     contentCardDesktop.appendChild(description);
 
     const buttonList = createElement('ul', { classList: ['card-buttons'] });
-    const technologies = window.innerWidth <= 768 ? projectData.technologies.slice(0, 3) : project.desktopData.technologies.slice(0, 4);
+    const technologies = window.innerWidth <= 768
+      ? projectData.technologies.slice(0, 3)
+      : project.desktopData.technologies.slice(0, 4);
 
     technologies.forEach((technology) => {
       const buttonItem = createElement('li', {});
-      const button = createElement('button', {}, [document.createTextNode(technology)]);
+      const button = createElement('button', {}, [
+        document.createTextNode(technology),
+      ]);
       buttonItem.appendChild(button);
       buttonList.appendChild(buttonItem);
     });
 
     contentCardDesktop.appendChild(buttonList);
 
-    const projectLinkContainer = createElement('div', { classList: ['project-link-container'] });
+    const projectLinkContainer = createElement('div', {
+      classList: ['project-link-container'],
+    });
     contentCardDesktop.appendChild(projectLinkContainer);
 
-    const projectLink = createElement('a', {
-      id: `projectButton${index + 1}`,
-      href: '#',
-      classList: ['project-link'],
-      'data-see-project-button': '',
-    }, [document.createTextNode('See project')]);
+    const projectLink = createElement(
+      'a',
+      {
+        id: `projectButton${index + 1}`,
+        href: '#',
+        classList: ['project-link'],
+        'data-see-project-button': '',
+      },
+      [document.createTextNode('See project')],
+    );
     projectLink.addEventListener('click', handleProjectButtonClick);
     projectLinkContainer.appendChild(projectLink);
 
