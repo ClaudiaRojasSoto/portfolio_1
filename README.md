@@ -21,9 +21,7 @@ OPTIONAL SECTIONS:
 After you're finished please remove all the comments and instructions!
 -->
 
-
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-
 
 <!-- TABLE OF CONTENTS -->
 
@@ -36,10 +34,6 @@ After you're finished please remove all the comments and instructions!
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
   - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
@@ -53,13 +47,11 @@ After you're finished please remove all the comments and instructions!
 
 # 📖 [portfolio_1] <a name="about-project"></a>
 
-**[Portfolio_1]** 
-This project showcases my skills in mobile design using Flexbox, Linters, and best practices in HTML and CSS. It demonstrates my ability to create responsive designs and follow best practices in version control, making it easy to understand and build upon.
+This project not only showcases my skills in mobile design using Flexbox, Linters, and best practices in HTML and CSS, but also highlights my proficiency in creating responsive designs for desktop viewing. By employing media queries and adhering to industry standards, I have ensured that the project adapts seamlessly to different screen sizes and devices. Moreover, my meticulous approach to version control and adherence to best practices make the project highly maintainable, enabling future developers to easily understand and build upon it. In addition, it introduces the use of JavaScript for the dynamic creation of web and popup windows, together with the use of data objects in the display.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
-
 
 <details>
   <summary>HTML</summary>
@@ -75,7 +67,6 @@ This project showcases my skills in mobile design using Flexbox, Linters, and be
   </ul>
 </details>
 
-
 <!-- Features -->
 
 ### Key Features <a name="key-features"></a>
@@ -86,86 +77,25 @@ This project showcases my skills in mobile design using Flexbox, Linters, and be
 - **[Pull request]**
 - **[Descriptive commits]**
 - **[Flexbox use]**
+- **[Implement Responsive Design]** -**[Add JavaScript Functionality]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LIVE DEMO -->
-
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
 ### Setup
+
 Clone this repository to your local machine:
 
-git clone https://github.com/ClaudiaRojasSoto/portfolio_1
-
-
-### Prerequisites
-
-In order to use this project, you need to have Node.js and npm installed on your local machine.
-
-<!--
-Example command:
-```sh
- gem install rails
-```
- -->
-
-
-
-### Install
-
-Install the necessary dependencies by running:
-
-npm install
-
-<!--
-Example command:
-```sh
-  cd my-project
-  gem install
-```
---->
-
-### Usage
-
-To start the project, run the following command:
-
-npm start
-
-<!--
-Example command:
-```sh
-  rails server
-```
---->
-
-### Run tests
-
-To run tests, run the following command:
-
-  npm test
-
-<!--
-Example command:
-```sh
-  bin/rails test test/models/article_test.rb
-```
---->
+git clone https://github.com/ClaudiaRojasSoto/ClaudiaRojasSoto.github.io
 
 ### Deployment
 
-You can deploy this project using:
-
-  npm run build
-
-<!--
-Example:
-```sh
-```
- -->
+You can deploy this project using: https://claudiarojassoto.github.io/portfolio_1/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -173,12 +103,22 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-
 👤 **Claudia Rojas**
 
 - GitHub: [@ClaudiaRojasSoto](https://github.com/ClaudiaRojasSoto)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/claudia-soto-260504208/)
 
+👤 **Pablo Bonasera**
+
+- GitHub: [@PabloBona](https://github.com/PabloBona)
+
+👤 **Peter Yeung**
+
+- GitHub: [@peteryeungtt](https://github.com/peteryeungtt)
+
+👤 **Arthur Iturre**
+
+- GitHub: [@ITurres](https://github.com/ITurres)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -186,9 +126,6 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-
--**[Implement Responsive Design]**
--**[Add JavaScript Functionality]**
 -**[Integrate Backend Functionality]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -199,14 +136,12 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the issues page.
-
+Feel free to check the [issues page](https://github.com/ClaudiaRojasSoto/portfolio_1/issues).
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
-
 
 If you like this project, please give it a ⭐️!
 
@@ -216,8 +151,8 @@ If you like this project, please give it a ⭐️!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-
 I would like to thank...
+
 <p> * Microverse for providing the opportunity to learn Git and GitHub in a collaborative environment.</p>
 <p> * GitHub Docs for providing a wealth of information on Git and GitHub.</p>
 
@@ -225,16 +160,13 @@ I would like to thank...
 
 <!-- FAQ (optional) -->
 
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+This project is [MIT](https://spdx.org/licenses/MIT.html) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 Footer
