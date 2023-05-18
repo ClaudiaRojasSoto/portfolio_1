@@ -357,7 +357,6 @@ seeProjectsButton.forEach((button) => {
 
 // Validation form and persevere data in browser
 const formValidator = document.querySelector('.form-contact-me');
-const formDataKey = 'formData';
 
 formValidator.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -373,9 +372,10 @@ formValidator.addEventListener('submit', (event) => {
       'Send Error. Your email must be written in lowercase letters.';
     errorElement.classList.add('error-message');
     textArea.parentNode.insertBefore(errorElement, textArea.nextSibling);
+  } else {
+    localStorage.clear();
+    formValidator.submit();
   }
-
-  formValidator.submit();
 });
 
 const formObj = { name: null, email: null, message: null };
