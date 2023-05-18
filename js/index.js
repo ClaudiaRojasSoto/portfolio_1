@@ -337,9 +337,7 @@ function createCards(projects) {
 
 createCards(projects);
 
-const seeProjectsButton = document.querySelectorAll(
-  '[data-see-project-button]',
-);
+const seeProjectsButton = document.querySelectorAll('[data-see-project-button]');
 
 seeProjectsButton.forEach((button) => {
   button.addEventListener('click', () => {
@@ -350,7 +348,7 @@ seeProjectsButton.forEach((button) => {
   });
 });
 
-// Validation form
+// Validation form and persevere data in browser
 const formValidator = document.querySelector('.form-contact-me');
 
 formValidator.addEventListener('submit', (event) => {
@@ -367,6 +365,42 @@ formValidator.addEventListener('submit', (event) => {
     errorElement.classList.add('error-message');
     textArea.parentNode.insertBefore(errorElement, textArea.nextSibling);
   } else {
+    localStorage.clear();
     formValidator.submit();
   }
 });
+
+const formObj = { name: null, email: null, message: null };
+
+const storeDataInLocalStorage = (dataKey, dataValue) => {
+  Object.keys(formObj).forEach((key) => {
+    if (dataKey === key) {
+      formObj[key] = dataValue;
+    }
+  });
+  localStorage.setItem('formData', JSON.stringify(formObj));
+};
+
+const formInputs = document.querySelectorAll('[data-form-inputs]');
+
+const loadFormDataFromLocalStorage = () => {
+  const storedFormData = localStorage.getItem('formData');
+  if (storedFormData) {
+    const parsedFormData = JSON.parse(storedFormData);
+    Object.assign(formObj, parsedFormData);
+    const formInputs = document.querySelectorAll('[data-form-inputs]');
+    formInputs.forEach((input) => {
+      if (input.name in parsedFormData) {
+        input.value = parsedFormData[input.name];
+      }
+    });
+  }
+};
+
+formInputs.forEach((input) => {
+  input.addEventListener('change', (event) => {
+    storeDataInLocalStorage(event.target.name, event.target.value);
+  });
+});
+
+loadFormDataFromLocalStorage();
