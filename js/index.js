@@ -350,8 +350,9 @@ seeProjectsButton.forEach((button) => {
   });
 });
 
-// Validation form
+// Validation form and persevere data in browser
 const formValidator = document.querySelector('.form-contact-me');
+const formDataKey = 'formData';
 
 formValidator.addEventListener('submit', (event) => {
   event.preventDefault();
@@ -367,6 +368,36 @@ formValidator.addEventListener('submit', (event) => {
     errorElement.classList.add('error-message');
     textArea.parentNode.insertBefore(errorElement, textArea.nextSibling);
   } else {
+    const formData = {
+      name: document.querySelector('input[name="name"]').value,
+      email: emailValue,
+      textarea: textArea.value
+    };
+
+    localStorageForm(formData);
     formValidator.submit();
   }
 });
+
+function localStorageForm(formData) {
+  let formResult = localStorage.getItem(formDataKey);
+  if (formResult === null) {
+    let formDataValue = [
+      {
+        name: formData.name,
+        email: formData.email,
+        textArea: formData.textArea
+      }
+    ];
+    localStorage.setItem(formDataKey, JSON.stringify(formDataValue));
+  } else {
+    let formResultValue = JSON.parse(formResult);
+    formResultValue.push({
+      name: formData.name,
+      email: formData.email,
+      textArea: formData.textArea
+    });
+    localStorage.setItem(formDataKey, JSON.stringify(formResultValue));
+  }
+}
+
