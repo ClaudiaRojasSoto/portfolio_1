@@ -77,7 +77,8 @@ This project not only showcases my skills in mobile design using Flexbox, Linter
 - **[Pull request]**
 - **[Descriptive commits]**
 - **[Flexbox use]**
-- **[Implement Responsive Design]** -**[Add JavaScript Functionality]**
+- **[Implement Responsive Design]** 
+-**[Add JavaScript Functionality]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
