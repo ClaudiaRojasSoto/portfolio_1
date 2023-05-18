@@ -979,3 +979,10 @@ ul {
     display: none;
   }
 }
+
+.error-message {
+  color: #fff;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
