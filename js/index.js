@@ -363,10 +363,20 @@ formValidator.addEventListener('submit', function (event) {
   const emailInput = document.querySelector('input[name="email"]');
   const textArea = document.getElementById('id-textarea');
 
+  const emailValue = emailInput.value;
+  const lowercaseEmail = emailValue.toLowerCase();
+
   const formData = {
     name: document.querySelector('input[name="name"]').value,
     email: document.querySelector('input[name="email"]').value,
     textarea: document.getElementById('id-textarea').value
   };
-  const emailValue = emailInput.value;
+  
+  if (emailValue !== lowercaseEmail) {
+
+    const errorElement = document.createElement('p');
+    errorElement.innerText = 'Send Error. Your email must be written in lowercase letters.';
+    errorElement.classList.add('error-message');
+    textArea.parentNode.insertBefore(errorElement, textArea.nextSibling);
+}
 });
