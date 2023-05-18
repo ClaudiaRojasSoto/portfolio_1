@@ -398,10 +398,14 @@ function localStorageForm(formData) {
       textArea: formData.textArea
     });
     localStorage.setItem(formDataKey, JSON.stringify(formResultValue));
+
+    console.log(formResultValue);
   }
 }
 
 const lastFormData = JSON.parse(localStorage.getItem(formDataKey)).pop();
+
+console.log(lastFormData);
 
 const lastName = lastFormData.name;
 const lastEmail = lastFormData.email;
