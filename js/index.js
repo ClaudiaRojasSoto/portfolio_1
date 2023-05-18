@@ -264,3 +264,15 @@ seeProjectsButton.forEach((button) => {
     openPopUp(project);
   });
 });
+
+//Validation form
+const formValidator = document.querySelector('.form-contact-me');
+
+formValidator.addEventListener('submit', function(event) {
+  event.preventDefault();
+  const emailInput = document.querySelector('input[name="email"]');
+  const textArea = document.getElementById('id-textarea');
+ 
+  const emailValue = emailInput.value;
+  
+});
