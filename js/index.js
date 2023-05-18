@@ -381,32 +381,34 @@ formValidator.addEventListener('submit', (event) => {
 const formObj = { name: null, email: null, message: null };
 
 const storeDataInLocalStorage = (dataKey, dataValue) => {
-  const formInputs = document.querySelectorAll('[data-form-inputs]');
-  formInputs.forEach((input) => {
-      formObj[input.name] = input.value;
+  Object.keys(formObj).forEach((key) => {
+    if (dataKey === key) {
+      formObj[key] = dataValue;
+    }
   });
   localStorage.setItem('formData', JSON.stringify(formObj));
 };
 
+const formInputs = document.querySelectorAll('[data-form-inputs]');
+
 const loadFormDataFromLocalStorage = () => {
-  const storedFormData = localStorage.getItem('formData')
-  if(window.localStorage.length > 0){
-  const parsedFormData = JSON.parse(storedFormData);
-  const formInputs = document.querySelectorAll('[data-form-inputs]');
-  formInputs.forEach((input)=>{
-    if(parsedFormData.hasOwnProperty(input.name)){
-      input.value = parsedFormData[input.name];
-    }
-  })
+  const storedFormData = localStorage.getItem('formData');
+  if (storedFormData) {
+    const parsedFormData = JSON.parse(storedFormData);
+    Object.assign(formObj, parsedFormData);
+    const formInputs = document.querySelectorAll('[data-form-inputs]');
+    formInputs.forEach((input) => {
+      if (input.name in parsedFormData) {
+        input.value = parsedFormData[input.name];
+      }
+    });
   }
-}
-
-loadFormDataFromLocalStorage();
-
-
+};
 
 formInputs.forEach((input) => {
   input.addEventListener('change', (event) => {
-    storeDataInLocalStorage(event.target.name, event.target.value)
-  })
+    storeDataInLocalStorage(event.target.name, event.target.value);
+  });
 });
+
+loadFormDataFromLocalStorage();
