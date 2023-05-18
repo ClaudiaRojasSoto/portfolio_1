@@ -97,49 +97,132 @@ function getData(id) {
 }
 
 function openPopUp(project) {
-  const modal = createElement('div', { classList: ['modal'], id: 'projectDetailsModal' }, [
-    createElement('div', { classList: ['modal-content'] }, [
-      createElement('span', { classList: ['close-btn'], id: 'close-btn-modal', innerHTML: '<img src="img/IconXpop.svg">' }),
-      createElement('div', { classList: ['project-details'] }, [
-        createElement('div', { classList: ['contenedor-title-modal'] }, [
-          createElement('h2', { classList: ['modal-title'], textContent: project.name }),
-        ]),
-        createElement('p', { classList: ['modal-subtitle'] }, [
-          createElement('span', { classList: ['modal-stack-subtitle'], textContent: project.subtitle }),
-          createElement('span', { classList: ['grey'] }, [
-            createElement('img', { src: './img/period.svg' }),
-            createElement('span', { classList: ['modal-stack'], textContent: project.stack }),
-            createElement('img', { src: './img/period.svg' }),
-            createElement('span', { classList: ['modal-year'], textContent: project.year }),
+  const modal = createElement(
+    'div',
+    { classList: ['modal'], id: 'projectDetailsModal' },
+    [
+      createElement('div', { classList: ['modal-content'] }, [
+        createElement('span', {
+          classList: ['close-btn'],
+          id: 'close-btn-modal',
+          innerHTML: '<img src="img/IconXpop.svg">',
+        }),
+        createElement('div', { classList: ['project-details'] }, [
+          createElement('div', { classList: ['contenedor-title-modal'] }, [
+            createElement('h2', {
+              classList: ['modal-title'],
+              textContent: project.name,
+            }),
           ]),
-        ]),
-        createElement('div', { classList: ['modal-img-container'] }, [
-          createElement('img', { classList: ['modal-img'], src: project.featuredImage }),
-        ]),
-        createElement('div', { classList: ['modal-container-desktop'] }, [
-          createElement('div', { classList: ['modal-container-description'] }, [
-            createElement('p', { classList: ['modal-description'], textContent: project.description }),
-            createElement('p', { classList: ['modal-description'], textContent: project.description2 }),
-          ]),
-          createElement('div', { classList: ['modal-container-right-buttons'] }, [
-            createElement('ul', { classList: ['modal-buttons'] },
-              project.technologies.map((tech, index) => createElement('li', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-li`] }, [
-                createElement('span', { classList: [`modal-${index < 3 ? ['html', 'css', 'js'][index] : 'js'}-span`], textContent: tech }),
-              ]))),
-            createElement('div', { classList: ['line'] }),
-            createElement('div', { classList: ['project-links'], id: 'project-link-modal' }, [
-              createElement('a', { classList: ['project-link'], textContent: 'Live Link', href: project.liveLink }, [
-                createElement('img', { classList: ['image-button1'], src: project.buttonLive }),
-              ]),
-              createElement('a', { classList: ['project-link'], textContent: 'Source Link', href: project.sourceLink }, [
-                createElement('img', { classList: ['image-button2'], src: project.buttonSource }),
-              ]),
+          createElement('p', { classList: ['modal-subtitle'] }, [
+            createElement('span', {
+              classList: ['modal-stack-subtitle'],
+              textContent: project.subtitle,
+            }),
+            createElement('span', { classList: ['grey'] }, [
+              createElement('img', { src: './img/period.svg' }),
+              createElement('span', {
+                classList: ['modal-stack'],
+                textContent: project.stack,
+              }),
+              createElement('img', { src: './img/period.svg' }),
+              createElement('span', {
+                classList: ['modal-year'],
+                textContent: project.year,
+              }),
             ]),
+          ]),
+          createElement('div', { classList: ['modal-img-container'] }, [
+            createElement('img', {
+              classList: ['modal-img'],
+              src: project.featuredImage,
+            }),
+          ]),
+          createElement('div', { classList: ['modal-container-desktop'] }, [
+            createElement(
+              'div',
+              { classList: ['modal-container-description'] },
+              [
+                createElement('p', {
+                  classList: ['modal-description'],
+                  textContent: project.description,
+                }),
+                createElement('p', {
+                  classList: ['modal-description'],
+                  textContent: project.description2,
+                }),
+              ],
+            ),
+            createElement(
+              'div',
+              { classList: ['modal-container-right-buttons'] },
+              [
+                createElement(
+                  'ul',
+                  { classList: ['modal-buttons'] },
+                  project.technologies.map((tech, index) => createElement(
+                    'li',
+                    {
+                      classList: [
+                        `modal-${
+                          index < 3 ? ['html', 'css', 'js'][index] : 'js'
+                        }-li`,
+                      ],
+                    },
+                    [
+                      createElement('span', {
+                        classList: [
+                          `modal-${
+                            index < 3 ? ['html', 'css', 'js'][index] : 'js'
+                          }-span`,
+                        ],
+                        textContent: tech,
+                      }),
+                    ],
+                  )),
+                ),
+                createElement('div', { classList: ['line'] }),
+                createElement(
+                  'div',
+                  { classList: ['project-links'], id: 'project-link-modal' },
+                  [
+                    createElement(
+                      'a',
+                      {
+                        classList: ['project-link'],
+                        textContent: 'Live Link',
+                        href: project.liveLink,
+                      },
+                      [
+                        createElement('img', {
+                          classList: ['image-button1'],
+                          src: project.buttonLive,
+                        }),
+                      ],
+                    ),
+                    createElement(
+                      'a',
+                      {
+                        classList: ['project-link'],
+                        textContent: 'Source Link',
+                        href: project.sourceLink,
+                      },
+                      [
+                        createElement('img', {
+                          classList: ['image-button2'],
+                          src: project.buttonSource,
+                        }),
+                      ],
+                    ),
+                  ],
+                ),
+              ],
+            ),
           ]),
         ]),
       ]),
-    ]),
-  ]);
+    ],
+  );
 
   document.body.appendChild(modal);
 
@@ -254,7 +337,9 @@ function createCards(projects) {
 
 createCards(projects);
 
-const seeProjectsButton = document.querySelectorAll('[data-see-project-button]');
+const seeProjectsButton = document.querySelectorAll(
+  '[data-see-project-button]',
+);
 
 seeProjectsButton.forEach((button) => {
   button.addEventListener('click', () => {
@@ -263,4 +348,25 @@ seeProjectsButton.forEach((button) => {
     const project = window.innerWidth <= 768 ? projectData : projectData.desktopData;
     openPopUp(project);
   });
+});
+
+// Validation form
+const formValidator = document.querySelector('.form-contact-me');
+
+formValidator.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const emailInput = document.querySelector('input[name="email"]');
+  const textArea = document.getElementById('id-textarea');
+
+  const emailValue = emailInput.value;
+  const lowercaseEmail = emailValue.toLowerCase();
+
+  if (emailValue !== lowercaseEmail) {
+    const errorElement = document.createElement('p');
+    errorElement.innerText = 'Send Error. Your email must be written in lowercase letters.';
+    errorElement.classList.add('error-message');
+    textArea.parentNode.insertBefore(errorElement, textArea.nextSibling);
+  } else {
+    formValidator.submit();
+  }
 });
