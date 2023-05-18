@@ -366,5 +366,7 @@ formValidator.addEventListener('submit', (event) => {
     errorElement.innerText = 'Send Error. Your email must be written in lowercase letters.';
     errorElement.classList.add('error-message');
     textArea.parentNode.insertBefore(errorElement, textArea.nextSibling);
+  } else {
+    formValidator.submit();
   }
 });
