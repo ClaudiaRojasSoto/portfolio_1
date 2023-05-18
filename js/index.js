@@ -401,3 +401,11 @@ function localStorageForm(formData) {
   }
 }
 
+const lastFormData = JSON.parse(localStorage.getItem(formDataKey)).pop();
+
+const lastName = lastFormData.name;
+const lastEmail = lastFormData.email;
+const lastTextArea = lastFormData.textArea;
+
+//Implementar carga de datos almacenados en localStorage
+
