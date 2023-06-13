@@ -21,7 +21,7 @@ const projects = [
       stack: 'Back End Dev',
       point2: './img/period.svg',
       year: '2023',
-      featuredImage: '../img/img1_desk.png',
+      featuredImage: '../img/img1_desk1.svg',
       description:
                 'This project build a To-Do List that uses Webpack for the development environment configuration.'
                 + 'The application allows you  \'s to manage and keep track of your daily tasks..',
