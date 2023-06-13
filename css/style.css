@@ -738,7 +738,7 @@ ul {
   }
 
   .bg-img1 {
-    background-image: url('../img/img1_desk.png');
+    background-image: url('../img/img1_desk.svg');
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
