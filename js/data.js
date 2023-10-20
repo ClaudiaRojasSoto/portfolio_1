@@ -21,7 +21,7 @@ const projects = [
       stack: 'Back End Dev',
       point2: './img/period.svg',
       year: '2023',
-      featuredImage: '../img/img1-desk1.svg',
+      featuredImage: './img/img1-desk1.svg',
       description:
                 'This project build a To-Do List that uses Webpack for the development environment configuration.'
                 + 'The application allows you  \'s to manage and keep track of your daily tasks..',
@@ -36,39 +36,39 @@ const projects = [
   },
   {
     id: 'projectButton2',
-    name: 'Multi-Post Stories',
+    name: 'BudgetApp',
     subtitle: 'Canopy',
     point: './img/period.svg',
-    stack: 'Back End Dev',
+    stack: 'Full stack Dev',
     point2: './img/period.svg',
-    year: '2015',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
-    featuredImage: '../img/card2.svg',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
-    liveLink: 'https://claudiarojassoto.github.io/',
-    sourceLink: 'https://github.com/ClaudiaRojasSoto/portfolio_1',
+    year: '2023',
+    description: 'The Budget App is a mobile web application designed for efficient budget management',
+    featuredImage: './img/budgetApp.png',
+    technologies: ['HTML', 'CSS', 'RoR'],
+    liveLink: 'https://budget-app-047t.onrender.com',
+    sourceLink: 'https://github.com/ClaudiaRojasSoto/BudgetApp',
     buttonLive: './img/Iconreloj.svg',
     buttonSource: './img/IconGit.svg',
     desktopData: {
-      name: 'Multi-Post Stories',
-      subtitle: 'Facebook',
+      name: 'BudgetApp',
+      subtitle: 'Render',
       point: './img/period.svg',
       stack: 'Full Stack Dev',
       point2: './img/period.svg',
-      year: '2015',
-      featuredImage: '../img/img2_desk.svg',
+      year: '2023',
+      featuredImage: './img/BudgetApp2.png',
       description:
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
-                + 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer '
-                + 'took a galley of type and scrambled it 1960s. Lorem <br> Ipsum is simply dummy text of the printing and typesetting industry. '
-                + 'Lorem Ipsum has been the industry\'s ',
-      description2: 'standard dummy text ever since the 1500s, when an unknown printer took a galley of '
-                + 'type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. '
-                + 'Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type '
-                + 'and scrambled it 1960s.',
+                'The Budget App is a mobile web application designed for efficient budget management'
+                + 'With this app, users can register and log in to maintain their personal financial records'
+                + 'They can add new transactions associated with specific categories and gain insights into their spending'
+                + 'patterns by tracking expenses within each category',
+      description2: 'The Budget App is a mobile web application designed for efficient budget management'
+      + 'With this app, users can register and log in to maintain their personal financial records'
+      + 'They can add new transactions associated with specific categories and gain insights into their spending'
+      + 'patterns by tracking expenses within each category',
       technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
-      liveLink: 'https://claudiarojassoto.github.io/',
-      sourceLink: 'https://github.com/ClaudiaRojasSoto/portfolio_1',
+      liveLink: 'https://budget-app-047t.onrender.com',
+      sourceLink: 'https://github.com/ClaudiaRojasSoto/BudgetApp',
       buttonLive: './img/Iconreloj.svg',
       buttonSource: './img/IconGit.svg',
     },
