@@ -4,7 +4,7 @@ const projects = [
     name: 'To Do List',
     subtitle: 'Canopy',
     point: './img/period.svg',
-    stack: 'Back End Dev',
+    stack: 'Front End Dev',
     point2: './img/period.svg',
     year: '2023',
     description: 'This project build a To-Do List that uses Webpack for the development environment configuration.\'s The application allows you to manage and keep track of your daily tasks.',
@@ -75,12 +75,12 @@ const projects = [
   },
   {
     id: 'projectButton3',
-    name: 'Tonic',
+    name: 'Car Reservation',
     subtitle: 'Canopy',
     point: './img/period.svg',
-    stack: 'Back End Dev',
+    stack: 'Full Stack Dev',
     point2: './img/period.svg',
-    year: '2015',
+    year: '2023',
     description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
     featuredImage: '../img/card3.svg',
     technologies: ['HTML', 'CSS', 'JavaScript'],
@@ -89,25 +89,25 @@ const projects = [
     buttonLive: './img/Iconreloj.svg',
     buttonSource: './img/IconGit.svg',
     desktopData: {
-      name: 'Facebook',
-      subtitle: 'Facebook',
+      name: 'Car Reservation',
+      subtitle: 'Car Reservation',
       point: './img/period.svg',
       stack: 'Full Stack Developer',
       point2: './img/period.svg',
-      year: '2015',
-      featuredImage: '../img/img3_desk.svg',
+      year: '2023',
+      featuredImage: './img/reserveCar.png',
       description:
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
-                + 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer '
-                + 'took a galley of type and scrambled it 1960s. Lorem <br> Ipsum is simply dummy text of the printing and typesetting industry. '
-                + 'Lorem Ipsum has been the industry\'s ',
-      description2: 'standard dummy text ever since the 1500s, when an unknown printer took a galley of '
-                + 'type and scrambled it 1960s with the releorem Ipsum is simply dummy text of the printing and typesetting industry. '
-                + 'Lorem Ipsum han printer took a galley of type and scrambled it 1960s with the releawn printer took a galley of type '
-                + 'and scrambled it 1960s.',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
-      liveLink: 'https://claudiarojassoto.github.io/',
-      sourceLink: 'https://github.com/ClaudiaRojasSoto/portfolio_1',
+                'Car Reservations App is a Full Stack Application to reserve cars and test it. '
+                + 'This project is developed using React.js, designed to provide an intuitive user interface '
+                + 'for managing reservations or appointments for test drives of cars. It communicates with the back-end  '
+                + 'API built with Ruby on Rails. ',
+      description2: 'Car Reservations App is a Full Stack Application to reserve cars and test it. '
+                + 'This project is developed using React.js, designed to provide an intuitive user interface '
+                + 'for managing reservations or appointments for test drives of cars. It communicates with the back-end  '
+                + 'API built with Ruby on Rails. ',
+      technologies: ['HTML', 'CSS', 'React', 'Ruby', 'Bootstrap'],
+      liveLink: 'https://driver-front.onrender.com/',
+      sourceLink: 'https://github.com/ClaudiaRojasSoto/Final-Capstone-Back-End',
       buttonLive: './img/Iconreloj.svg',
       buttonSource: './img/IconGit.svg',
     },

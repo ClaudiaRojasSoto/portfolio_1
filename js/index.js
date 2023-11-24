@@ -404,3 +404,22 @@ formInputs.forEach((input) => {
 });
 
 loadFormDataFromLocalStorage();
+
+document.addEventListener('DOMContentLoaded', function() {
+  let downloadButton = document.getElementById('downloadButton');
+  downloadButton.addEventListener('click', function() {
+      downloadResume();
+  });
+});
+
+function downloadResume() {
+  let element = document.createElement('a');
+
+  element.setAttribute('href', 'https://docs.google.com/document/d/1gwAXDjmIi0xSok-wgCjE_vRtgAR5MBi031kl1Gt1oH4/edit?usp=sharing');
+
+  element.setAttribute('download', 'https://docs.google.com/document/d/1gwAXDjmIi0xSok-wgCjE_vRtgAR5MBi031kl1Gt1oH4/edit?usp=sharing');
+
+  document.body.appendChild(element);
+  element.click();
+  document.body.removeChild(element);
+}
