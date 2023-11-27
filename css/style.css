@@ -17,17 +17,26 @@ body {
 header::before {
   content: '';
   display: block;
-  height: 20px;
+  height: 10px;
   background-color: #fff;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 48px;
 }
 
 .my-nav {
   display: flex;
   background-color: #fff;
-  height: 50px;
+  height: 20px;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 20px 20px;
   position: relative;
 }
 
