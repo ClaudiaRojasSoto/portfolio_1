@@ -4,7 +4,7 @@ const projects = [
     name: 'To Do List',
     subtitle: 'Canopy',
     point: './img/period.svg',
-    stack: 'Front End Dev',
+    stack: 'Back End Dev',
     point2: './img/period.svg',
     year: '2023',
     description: 'This project build a To-Do List that uses Webpack for the development '
@@ -64,7 +64,7 @@ const projects = [
                 + 'With this app, users can register and log in to maintain their personal financial records'
                 + 'They can add new transactions associated with specific categories and gain insights into their spending'
                 + 'patterns by tracking expenses within each category',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
+      technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby on Rails', 'Bootstrap'],
       liveLink: 'https://budget-app-047t.onrender.com',
       sourceLink: 'https://github.com/ClaudiaRojasSoto/BudgetApp',
       buttonLive: './img/Iconreloj.svg',
@@ -84,7 +84,7 @@ const projects = [
     + 'for managing reservations or appointments for test drives of cars. It communicates with the back-end  '
     + 'API built with Ruby on Rails. ',
     featuredImage: './img/reserveCar.png',
-    technologies: ['HTML', 'CSS', 'JavaScript'],
+    technologies: ['HTML', 'CSS', 'Ruby', 'React'],
     liveLink: 'https://claudiarojassoto.github.io/',
     sourceLink: 'https://github.com/ClaudiaRojasSoto/portfolio_1',
     buttonLive: './img/Iconreloj.svg',
@@ -93,7 +93,7 @@ const projects = [
       name: 'Car Reservation',
       subtitle: 'Car Reservation',
       point: './img/period.svg',
-      stack: 'Full Stack Developer',
+      stack: 'Full Stack Dev',
       point2: './img/period.svg',
       year: '2023',
       featuredImage: './img/reserveCar.png',
@@ -102,7 +102,7 @@ const projects = [
                 + 'This project is developed using React.js, designed to provide an intuitive user interface '
                 + 'for managing reservations or appointments for test drives of cars. It communicates with the back-end  '
                 + 'API built with Ruby on Rails. ',
-      technologies: ['HTML', 'CSS', 'React', 'Ruby', 'Bootstrap'],
+      technologies: ['HTML', 'CSS', 'React/Redux', 'Ruby', 'Bootstrap'],
       liveLink: 'https://driver-front.onrender.com/',
       sourceLink: 'https://github.com/ClaudiaRojasSoto/Final-Capstone-Back-End',
       buttonLive: './img/Iconreloj.svg',
@@ -111,35 +111,35 @@ const projects = [
   },
   {
     id: 'projectButton4',
-    name: 'Multi-Post Stories',
-    subtitle: 'Canopy',
+    name: 'Metricks Tracker ',
+    subtitle: 'API',
     point: './img/period.svg',
-    stack: 'Back End Dev',
+    stack: 'Front End Dev',
     point2: './img/period.svg',
-    year: '2015',
-    description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essent',
+    year: '2023',
+    description: 'Web application building with React and Redux',
     featuredImage: '../img/card4.svg',
     technologies: ['HTML', 'CSS', 'JavaScript'],
-    liveLink: 'https://claudiarojassoto.github.io/',
-    sourceLink: 'https://github.com/ClaudiaRojasSoto/portfolio_1',
+    liveLink: 'https://population-tracker-h69j.onrender.com/',
+    sourceLink: 'https://github.com/ClaudiaRojasSoto/Metricks_Tracker',
     buttonLive: './img/Iconreloj.svg',
     buttonSource: './img/IconGit.svg',
     desktopData: {
-      name: 'Uber Navigation',
-      subtitle: 'Uber',
+      name: 'Metricks Tracker ',
+      subtitle: 'API',
       point: './img/period.svg',
-      stack: 'Lead Developer',
+      stack: 'Front End Dev',
       point2: './img/period.svg',
-      year: '2018',
-      featuredImage: '../img/img4_desk.svg',
+      year: '2023',
+      featuredImage: './img/metricTracker.png',
       description:
-                'Lorem Ipsum is simply dummy text of the printing and typesetting industry. '
-                + 'Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer '
-                + 'took a galley of type and scrambled it 1960s. Lorem <br> Ipsum is simply dummy text of the printing and typesetting industry. '
-                + 'Lorem Ipsum has been the industry\'s ',
-      technologies: ['HTML', 'CSS', 'JavaScript', 'Ruby', 'Bootstrap'],
-      liveLink: 'https://claudiarojassoto.github.io/',
-      sourceLink: 'https://github.com/ClaudiaRojasSoto/portfolio_1',
+                'Web application building with React and Redux. '
+                + 'Explore a selected API, monitor, and obtain information effortlessly! '
+                + 'Metricks Tracker focuses primarily on the world population to offer a detailed and meaningful analysis of data related to this area. '
+                + 'With Metricks Tracker, you will have access to valuable and up-to-date information about the world population.',
+      technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
+      liveLink: 'https://population-tracker-h69j.onrender.com/',
+      sourceLink: 'https://github.com/ClaudiaRojasSoto/Metricks_Tracker',
       buttonLive: './img/Iconreloj.svg',
       buttonSource: './img/IconGit.svg',
     },
