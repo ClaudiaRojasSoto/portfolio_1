@@ -167,6 +167,10 @@ ul {
   gap: 12px;
 }
 
+.developer-languages-title img {
+  cursor: pointer;
+}
+
 .modal-title,
 .modal-subtitle,
 .modal-description,
