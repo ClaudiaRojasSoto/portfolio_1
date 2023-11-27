@@ -423,3 +423,36 @@ function downloadResume() {
   element.click();
   document.body.removeChild(element);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleArrows = document.querySelectorAll('.toggle-arrow');
+
+  toggleArrows.forEach(arrow => {
+      arrow.addEventListener('click', function() {
+          const parentLi = this.parentNode;
+
+          let nextLi = parentLi.nextElementSibling;
+          while(nextLi && !nextLi.querySelector('.developer-languages')) {
+              nextLi = nextLi.nextElementSibling;
+          }
+
+          const skillsList = nextLi ? nextLi.querySelector('.developer-languages') : null;
+
+          if (skillsList) {
+              if (skillsList.classList.contains('hidden')) {
+                  skillsList.classList.remove('hidden');
+                  this.src = './img/down.svg';
+              } else {
+                  skillsList.classList.add('hidden');
+                  this.src = './img/rigth.svg';
+              }
+          }
+      });
+  });
+});
+
+
+
+
+
+

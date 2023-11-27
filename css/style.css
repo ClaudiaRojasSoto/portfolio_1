@@ -505,6 +505,10 @@ ul {
   padding-bottom: 0;
 }
 
+.hidden {
+  display: none;
+}
+
 .items-developer-languages {
   display: flex;
   align-items: center;
@@ -731,6 +735,10 @@ ul {
     flex-direction: row;
     margin: 5px 0 0 0;
     text-align: left;
+  }
+
+  .hidden {
+    display: none;
   }
 
   .principal-img {
