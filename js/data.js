@@ -9,10 +9,10 @@ const projects = [
     year: '2023',
     description: 'The Math Magicians app is a powerful calculator that provides users with the ability '
     + 'to perform various calculations effortlessly.',
-    featuredImage: './img/math1.png',
+    featuredImage: './img/math3.png',
     technologies: ['HTML', 'CSS', 'JavaScript'],
-    liveLink: 'https://claudiarojassoto.github.io/toDo_list/dist/',
-    sourceLink: 'https://github.com/ClaudiaRojasSoto/toDo_list',
+    liveLink: 'https://mathmagicians-b6mk.onrender.com',
+    sourceLink: 'https://github.com/ClaudiaRojasSoto/math_magicians',
     buttonLive: './img/Iconreloj.svg',
     buttonSource: './img/IconGit.svg',
     desktopData: {
@@ -22,15 +22,15 @@ const projects = [
       stack: 'Front End Dev',
       point2: './img/period.svg',
       year: '2023',
-      featuredImage: './img/math2.svg',
+      featuredImage: './img/math2.png',
       description:
                 'The Math Magicians app is a powerful calculator that provides users with the ability to perform various calculations effortlessly.'
                 + 'Whether you need to solve complex equations, perform mathematical operations, or work with numbers,'
                 + 'this app has got you covered. With its intuitive interface and user-friendly design,'
                 + 'performing calculations has never been easier.',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      liveLink: 'https://claudiarojassoto.github.io/toDo_list/dist/',
-      sourceLink: 'https://github.com/ClaudiaRojasSoto/toDo_list',
+      liveLink: 'https://mathmagicians-b6mk.onrender.com',
+      sourceLink: 'https://github.com/ClaudiaRojasSoto/math_magicians',
       buttonLive: './img/Iconreloj.svg',
       buttonSource: './img/IconGit.svg',
     },
