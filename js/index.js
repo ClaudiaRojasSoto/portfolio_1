@@ -192,6 +192,8 @@ function openPopUp(project) {
                         classList: ['project-link'],
                         textContent: 'Live Link',
                         href: project.liveLink,
+                        target: '_blank',
+                        rel: 'noopener noreferrer'
                       },
                       [
                         createElement('img', {
@@ -206,6 +208,8 @@ function openPopUp(project) {
                         classList: ['project-link'],
                         textContent: 'Source Link',
                         href: project.sourceLink,
+                        target: '_blank',
+                        rel: 'noopener noreferrer'
                       },
                       [
                         createElement('img', {
