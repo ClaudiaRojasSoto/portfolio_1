@@ -87,8 +87,8 @@ const projects = [
     + 'API built with Ruby on Rails. ',
     featuredImage: './img/reserveCar.png',
     technologies: ['HTML', 'CSS', 'Ruby', 'React'],
-    liveLink: 'https://claudiarojassoto.github.io/',
-    sourceLink: 'https://github.com/ClaudiaRojasSoto/portfolio_1',
+    liveLink: 'https://driver-front.onrender.com/',
+    sourceLink: 'https://github.com/ClaudiaRojasSoto/Final-Capstone-Back-End',
     buttonLive: './img/Iconreloj.svg',
     buttonSource: './img/IconGit.svg',
     desktopData: {
