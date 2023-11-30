@@ -419,9 +419,9 @@ document.addEventListener('DOMContentLoaded', function() {
 function downloadResume() {
   let element = document.createElement('a');
 
-  element.setAttribute('href', 'https://docs.google.com/document/d/1gwAXDjmIi0xSok-wgCjE_vRtgAR5MBi031kl1Gt1oH4/edit?usp=sharing');
+  element.setAttribute('href', 'https://docs.google.com/document/d/1-sSdGf806OCL4ump3TjNG-_wl_BH6-PAwDU5nMXrE3M/edit?usp=sharing');
 
-  element.setAttribute('download', 'https://docs.google.com/document/d/1gwAXDjmIi0xSok-wgCjE_vRtgAR5MBi031kl1Gt1oH4/edit?usp=sharing');
+  element.setAttribute('download', 'https://docs.google.com/document/d/1-sSdGf806OCL4ump3TjNG-_wl_BH6-PAwDU5nMXrE3M/edit?usp=sharing');
 
   document.body.appendChild(element);
   element.click();
